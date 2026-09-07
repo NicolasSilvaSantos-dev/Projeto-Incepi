@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tampas | Incepi do Brasil</title>
+        
+        <link rel="icon" href="../imagens/icon-site.png" type="image/png">
+    </head>
+    <body>
+
+        <header class="site-header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+        
+                    <a href="/" class="brand navbar-brand">
+                        <img src="../imagens/Logo.png" alt="Incepi do Brasil">
+                    </a>
+        
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsPrincipal" aria-controls="navbarsPrincipal" aria-expanded="false" aria-label="Menu Principal">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse py-1" id="navbarsPrincipal">
+                        <ul class="navbar-nav m-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a href="../index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../produtos.html" class="nav-link active">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../orcamento.html" class="nav-link">Orçamento</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../aplicacao.html" class="nav-link">Aplicação</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../tipos-de-plastico.html" class="nav-link">Tipos de Plástico</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../qualidade.html" class="nav-link">Qualidade</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../trabalhe-conosco.html" class="nav-link">Trabalhe Conosco</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../contato.html" class="nav-link">Contato</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../empresa.html" class="nav-link">Empresa</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main id="conteudo-principal">
+            <article class="produto-detalhe">
+                <h1>Tampas</h1>
+
+                <section class="produto-principal">
+                    <div class="produto-midia">
+                        <figure>
+                            <img src="../imagens/tampas.jpg" alt="Conjunto de tampas plásticas">
+                        </figure>
+                    </div>
+
+                    <div class="produto-especificacoes">
+                        <p><strong>MATÉRIA-PRIMA BÁSICA:</strong><br>PP CP442XP Braskem</p>
+                        
+                        <p><strong>FECHAMENTO:</strong></p>
+                        <ul>
+                            <li>TAMPA COM LACRE</li>
+                            <li>VÁLVULA DE SEGURANÇA</li>
+                            <li>PIGMENTAÇÃO</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <hr>
+
+                <!-- Formulário para Orçamento / Venda -->
+                <section class="produto-orcamento">
+                    <h2>Solicitar Cotação para Tampas</h2>
+                    <form action="enviar-orcamento.php" method="post">
+                        <input type="hidden" name="produto_interesse" value="Tampas">
+
+                        <div>
+                            <label for="nome">Nome Completo:*</label><br>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+
+                        <div>
+                            <label for="email">E-mail:*</label><br>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div>
+                            <label for="telefone">Telefone / WhatsApp:*</label><br>
+                            <input type="tel" id="telefone" name="telefone" required>
+                        </div>
+
+                        <div>
+                            <label for="empresa">Empresa:</label><br>
+                            <input type="text" id="empresa" name="empresa">
+                        </div>
+
+                        <div>
+                            <label for="quantidade">Quantidade Desejada (unidades):*</label><br>
+                            <input type="number" id="quantidade" name="quantidade" min="1" required>
+                        </div>
+
+                        <div>
+                            <label for="mensagem">Observações / Mensagem:</label><br>
+                            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                        </div>
+
+                        <br>
+                        <button type="submit">Enviar Solicitação de Orçamento</button>
+                    </form>
+                </section>
+
+            </article>
+        </main>
+
+        <footer class="site-footer text-center p-3">
+            <address>
+                Rua Aparecida de São Manuel nº376/384 - Vila Nova York<br>
+                São Paulo - SP - Brasil | Cep:03480-010<br>
+                TEL: <a href="tel:551127215156">(11) 2721-5156</a> - <a href="mailto:vendas@incepi.com.br">VENDAS@INCEPI.COM.BR</a>
+            </address>      
+        </footer>
+
+    </body>
+</html>
