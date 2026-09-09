@@ -27,28 +27,28 @@
                                 <a href="../index.html" class="nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../produtos.html" class="nav-link active">Produtos</a>
+                                <a href="../pages/produtos.html" class="nav-link active">Produtos</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../orcamento.html" class="nav-link">Orçamento</a>
+                                <a href="../pages/orcamento.html" class="nav-link">Orçamento</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../aplicacao.html" class="nav-link">Aplicação</a>
+                                <a href="../pages/aplicacao.html" class="nav-link">Aplicação</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../tipos-de-plastico.html" class="nav-link">Tipos de Plástico</a>
+                                <a href="../pages/tipos-de-plastico.html" class="nav-link">Tipos de Plástico</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../qualidade.html" class="nav-link">Qualidade</a>
+                                <a href="../pages/qualidade.html" class="nav-link">Qualidade</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../trabalhe-conosco.html" class="nav-link">Trabalhe Conosco</a>
+                                <a href="../pages/trabalhe-conosco.html" class="nav-link">Trabalhe Conosco</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../contato.html" class="nav-link">Contato</a>
+                                <a href="../pages/contato.html" class="nav-link">Contato</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../empresa.html" class="nav-link">Empresa</a>
+                                <a href="../pages/empresa.html" class="nav-link">Empresa</a>
                             </li>
                         </ul>
                     </div>
@@ -99,7 +99,15 @@
 
                         <div>
                             <label for="telefone">Telefone / WhatsApp:*</label><br>
-                            <input type="tel" id="telefone" name="telefone" required>
+                            <input 
+                                type="tel" 
+                                id="telefone" 
+                                name="telefone" 
+                                required 
+                                maxlength="15"
+                                pattern="(\([0-9]{2}\)\s?|[0-9]{2}\s?)[0-9]{4,5}-?[0-9]{4}" 
+                                placeholder="(11) 99999-9999"
+                                title="Digite o DDD e o número (ex: 11999999999 ou (11) 99999-9999)">
                         </div>
 
                         <div>
