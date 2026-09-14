@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trabalhe Conosco e Parcerias | Incepi do Brasil - Indústria e Comércio de Embalagens Plásticas Industriais Ltda</title>
+        <link rel="icon" href="../assets/imagens/icon-site.png" type="image/png">
+
+    </head>
+    <body>
+
+        <header class="site-header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a href="../index.html">
+                        <img src="../assets/imagens/Logo.png" width="350" alt="Logo Incepi do Brasil" class="img-fluid">
+                    </a>
+
+                    <div class="collapse navbar-collapse py-1" id="navbarsPrincipal">
+                        <ul class="navbar-nav m-auto mb-2 mb-md-0">
+                            <li class="nav-item">
+                                <a href="../index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/produtos.html" class="nav-link">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/orcamento.html" class="nav-link">Orçamento</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/aplicacao.html" class="nav-link">Aplicação</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/tipos-de-plastico.html" class="nav-link">Tipos de Plástico</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/qualidade.html" class="nav-link">Qualidade</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/trabalhe-conosco.html" class="nav-link active">Trabalhe Conosco</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/contato.html" class="nav-link">Contato</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/empresa.html" class="nav-link">Empresa</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- CONTEÚDO PRINCIPAL: TRABALHE CONOSCO E PARCERIAS -->
+        <main id="conteudo-principal" class="container py-5">
+            <section aria-labelledby="titulo-trabalhe-conosco" class="max-width-800 mx-auto" style="max-width: 800px;">
+                <h1 id="titulo-trabalhe-conosco" class="text-primary mb-3 text-center">Trabalhe Conosco & Parcerias</h1>
+                <p class="lead text-muted mb-4 text-center">
+                    Quer fazer parte da nossa equipe ou se tornar uma empresa parceira para fornecimento de embalagens plásticas industriais? Preencha o formulário abaixo e entraremos em contato.
+                </p>
+
+                <!-- FORMULÁRIO -->
+                <form action="#" method="POST" enctype="multipart/form-data" class="card shadow-sm p-4 border-light">
+                    
+                    <!-- Tipo de Interesse (Dupla Finalidade) -->
+                    <div class="mb-3">
+                        <label for="tipoInteresse" class="form-label font-weight-bold"><strong>Qual é o seu objetivo de contato? *</strong></label>
+                        <select class="form-select" id="tipoInteresse" name="tipoInteresse" required>
+                            <option value="" selected disabled>Selecione uma opção...</option>
+                            <option value="trabalhe-conosco">Vaga de Emprego / Enviar Currículo (Candidato)</option>
+                            <option value="parceria-comercial">Parceria Comercial / Compra de Embalagens (Empresa)</option>
+                            <option value="representante">Representante Comercial / Vendas</option>
+                            <option value="outro">Outras Parcerias</option>
+                        </select>
+                    </div>
+
+                    <!-- Dados Principais -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="nome" class="form-label"><strong>Nome Completo / Nome do Contato *</strong></label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="empresa" class="form-label"><strong>Nome da Empresa</strong> <small class="text-muted">(se for parceria)</small></label>
+                            <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Razão social ou nome fantasia">
+                        </div>
+                    </div>
+
+                    <!-- Contatos -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="email" class="form-label"><strong>E-mail de Contato *</strong></label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@dominio.com" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="telefone" class="form-label"><strong>Telefone / WhatsApp *</strong></label>
+                            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                        </div>
+                    </div>
+
+                    <!-- Área de Interesse / Cidade -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="area" class="form-label"><strong>Área de Interesse / Cargo Pretendido</strong></label>
+                            <input type="text" class="form-control" id="area" name="area" placeholder="Ex: Produção, Vendas, Logística, Compras">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="cidade" class="form-label"><strong>Cidade / UF *</strong></label>
+                            <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Ex: São Paulo - SP" required>
+                        </div>
+                    </div>
+
+                    <!-- Anexo de Arquivo (Currículo ou Apresentação da Empresa) -->
+                    <div class="mb-3">
+                        <label for="arquivoAnexo" class="form-label"><strong>Anexar Currículo ou Apresentação da Empresa</strong> <small class="text-muted">(PDF, DOC, DOCX - Máx 5MB)</small></label>
+                        <input class="form-control" type="file" id="arquivoAnexo" name="arquivoAnexo" accept=".pdf,.doc,.docx">
+                    </div>
+
+                    <!-- Mensagem / Observações -->
+                    <div class="mb-4">
+                        <label for="mensagem" class="form-label"><strong>Mensagem ou Apresentação Breve *</strong></label>
+                        <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Fale um pouco sobre sua experiência profissional ou sobre as necessidades de embalagem da sua empresa..." required></textarea>
+                    </div>
+
+                    <!-- Botão de Envio -->
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
+                    </div>
+
+                </form>
+            </section>
+        </main>
+
+        <footer class="site-footer text-center p-3 bg-light border-top">
+            <address class="m-0">
+                Rua Aparecida de São Manuel nº376/384 - Vila Nova York<br>
+                São Paulo - SP - Brasil | Cep:03480-010<br>
+                TEL: <a href="tel:551127215156">(11) 2721-5156</a> - <a href="mailto:vendas@incepi.com.br">VENDAS@INCEPI.COM.BR</a>
+            </address>     
+        </footer>
+    </body>
+</html>

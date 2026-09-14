@@ -9,15 +9,13 @@
     <body>
 
         <header class="site-header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a href="../index.html">
+                        <img src="../assets/imagens/Logo.png" width="350" alt="Logo Incepi do Brasil" class="img-fluid">
+                    </a>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <a href="../index.html">
-                <img src="../assets/imagens/Logo.png"  width="350px" alt="Logo Incepi do Brasil" class="img-fluid">
-            </a>
-
-
-            <div class="collapse navbar-collapse py-1" id="navbarsPrincipal">
+                    <div class="collapse navbar-collapse py-1" id="navbarsPrincipal">
                         <ul class="navbar-nav m-auto mb-2 mb-md-0">
                             <li class="nav-item">
                                 <a href="../index.html" class="nav-link">Home</a>
@@ -41,16 +39,17 @@
                                 <a href="../pages/trabalhe-conosco.html" class="nav-link">Trabalhe Conosco</a>
                             </li>
                             <li class="nav-item">
-                                <a href="../pages/contato.html" class="nav-link">Contato</a>
+                                <a href="../pages/contato.html" class="nav-link active">Contato</a>
                             </li>
                             <li class="nav-item">
                                 <a href="../pages/empresa.html" class="nav-link">Empresa</a>
                             </li>
                         </ul>
                     </div>
-        </div>
-    </nav>
-</header>
+                </div>
+            </nav>
+        </header>
+
         <main id="conteudo-principal">
             <section aria-labelledby="titulo-contato" class="text-center">
                 <h1 id="titulo-contato">Contato</h1>
@@ -60,31 +59,30 @@
                 <address>
                     Rua Aparecida de São Manuel nº376/384 Cep: 03480-010<br>
                     Vila Nova York - São Paulo-SP Brasil<br>
-                    <strong>Tel:</strong> <a href="tel:551127215156">(0XX11) 2721-5156</a><br>
+                    <strong>Tel:</strong> <a href="tel:551127215156">(11) 2721-5156</a><br>
                     <strong>E-mail:</strong> <a href="mailto:vendas@incepi.com.br">vendas@incepi.com.br</a>
                 </address>
 
-                <section>
-                    <h2>Horário de atendimento</h2>
+                <section aria-labelledby="titulo-horario">
+                    <h2 id="titulo-horario">Horário de atendimento</h2>
               
-                    <article>
-                      <h3>Atendimento online</h3>
-                      <p>Segunda a sexta, das 09:00 às 18:00</p>
-                    </article>
+                    <div>
+                        <h3>Atendimento online</h3>
+                        <p>Segunda a sexta, das 09:00 às 18:00</p>
+                    </div>
               
-                    <article>
-                      <h3>Entrega e retirada</h3>
-                      <p>Segunda a sexta, das 09:00 às 17:00</p>
-                    </article>
-                  </section>
+                    <div>
+                        <h3>Entrega e retirada</h3>
+                        <p>Segunda a sexta, das 09:00 às 17:00</p>
+                    </div>
+                </section>
 
                 <!-- Integração com Google Maps -->
                 <div class="mapa-container">
                     <iframe 
                         src="https://maps.google.com/maps?ll=-23.578481,-46.507163&amp;z=16&amp;t=m&amp;hl=pt-PT&amp;gl=BR&amp;mapclient=embed&amp;cid=2041758742412119645&amp;output=embed" 
-                        width="100%" 
+                        width="600"
                         height="450" 
-                        style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade"
