@@ -39,4 +39,4 @@ Número apenas para ligações.
 
 <img src="assets/imagens/Presença na Empresa.jpeg">
 
-*Equipe da Incepi do Brasil no chão de fábrica, entre as máquinas de produção de embalagens plásticas.*
+*Equipe da Incepi do Brasil no chão de fábrica, entre as máquinas de produção de embalagens plásticas.*  
