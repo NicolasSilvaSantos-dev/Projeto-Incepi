@@ -3,6 +3,7 @@
 Projeto acadêmico de desenvolvimento Front End para Web, tendo como cliente a empresa **Incepi do Brasil**.
 
 **Professor:** Cid Rodrigues De Andrade
+**Univercidade** Universidade Cidade de São Paulo - Unicid Tatuapé
 
 ## Integrantes do Grupo
 
@@ -33,6 +34,9 @@ Ao longo da criação do projeto, nosso principal desafio foi a página dos prod
 
 Trabalho na empresa Incepi do Brasil há alguns anos, e quando recebi a tarefa de criar um site, fui direto ao setor administrativo para saber se poderia desenvolver o site da empresa. Conversei com um dos donos da empresa, o senhor Claudio, e ele imediatamente autorizou o projeto. Ele também me explicou como poderia ser feito e me deu um pendrive com as informações e imagens que eu precisava.
 
-![Equipe da Incepi do Brasil na fábrica] <img src="assets/imagens/Presença na Empresa.jpeg">
+## Contato (11) 2721-5156
+Número apenas para ligações.
+
+<img src="assets/imagens/Presença na Empresa.jpeg">
 
 *Equipe da Incepi do Brasil no chão de fábrica, entre as máquinas de produção de embalagens plásticas.*
