@@ -2,7 +2,7 @@
 
 Projeto acadêmico de desenvolvimento Front End para Web, tendo como cliente a empresa **Incepi do Brasil**.
 
-**Professor:** Cid Rodrigues De Andrade
+**Professor:** Cid Rodrigues De Andrade  
 **Univercidade** Universidade Cidade de São Paulo - Unicid Tatuapé
 
 ## Integrantes do Grupo
