@@ -26,9 +26,10 @@ Este projeto de desenvolvimento do novo site visa alinhar a presença digital da
 
 Ao longo da criação do projeto, nosso principal desafio foi a página dos produtos e a inclusão de áudio e vídeo, mas aprendemos e fizemos o nosso melhor. Até o momento, foi um projeto extremamente divertido de criar.
 
-## Site (Hospedagem Netlify)
+## Site (Hospedagem Netlify) e (GitHub Pages)
 
-🔗 [https://incepibrasil-com.netlify.app/](https://incepibrasil-com.netlify.app/)
+🔗 [https://incepibrasil-com.netlify.app/](https://incepibrasil-com.netlify.app/)  
+🔗 [https://nicolassilvasantos-dev.github.io/Projeto-Incepi/](https://nicolassilvasantos-dev.github.io/Projeto-Incepi/)
 
 ## Relato de Contato com a Empresa
 
