@@ -2,47 +2,48 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incepi do Brasil - Indústria e Comércio de Embalagens Plásticas Industriais Ltda</title>
     <link rel="icon" type="image/x-icon" href="assets/imagens/icon-site.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
     <header class="site-header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
+        <nav class="navbar">
+            <div class="header-container">
                 <a href="index.html">
-                    <img src="assets/imagens/Logo.png" width="350" alt="Logo Incepi do Brasil" class="img-fluid">
+                    <img src="assets/imagens/Logo.png" width="350" alt="Logo Incepi do Brasil">
                 </a>
 
-                <div class="collapse navbar-collapse py-1" id="navbarsPrincipal">
-                    <ul class="navbar-nav m-auto mb-2 mb-md-0">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-link active" aria-current="page">Home</a>
+                <div id="navbarsPrincipal">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="active" aria-current="page">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/produtos.html" class="nav-link">Produtos</a>
+                        <li>
+                            <a href="pages/produtos.html">Produtos</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/orcamento.html" class="nav-link">Orçamento</a>
+                        <li>
+                            <a href="pages/orcamento.html">Orçamento</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/aplicacao.html" class="nav-link">Aplicação</a>
+                        <li>
+                            <a href="pages/aplicacao.html">Aplicação</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/tipos-de-plastico.html" class="nav-link">Tipos de Plástico</a>
+                        <li>
+                            <a href="pages/tipos-de-plastico.html">Tipos de Plástico</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/qualidade.html" class="nav-link">Qualidade</a>
+                        <li>
+                            <a href="pages/qualidade.html">Qualidade</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/trabalhe-conosco.html" class="nav-link">Trabalhe Conosco</a>
+                        <li>
+                            <a href="pages/trabalhe-conosco.html">Trabalhe Conosco</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/contato.html" class="nav-link">Contato</a>
+                        <li>
+                            <a href="pages/contato.html">Contato</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/empresa.html" class="nav-link">Empresa</a>
+                        <li>
+                            <a href="pages/empresa.html">Empresa</a>
                         </li>
                     </ul>
                 </div>
@@ -54,46 +55,40 @@
     <main id="conteudo-principal">
 
         <!-- SEÇÃO HERO / DESTAQUE -->
-        <section class="destaque py-5 bg-light border-bottom">
-            <div class="container-xxl">
-                <div class="row align-items-center g-4">
-                    <div class="col-12 col-lg-6 text-center">
-                        <img src="assets/imagens/bombonas-principal.jpeg" width="450" alt="Bombonas e Embalagens Plásticas Industriais" class="img-fluid rounded shadow">
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <h1 class="h2 text-primary fw-bold mb-3">
-                            INDÚSTRIA E COMÉRCIO DE EMBALAGENS PLÁSTICAS INDUSTRIAIS
-                        </h1>
-                        <p class="lead text-secondary">
-                            Soluções em embalagens plásticas de alta qualidade com tecnologia avançada para diversos segmentos industriais.
-                        </p>
-                        <a href="pages/orcamento.html" class="btn btn-primary btn-lg mt-2">Solicitar Orçamento</a>
-                    </div>
+        <section class="destaque" aria-labelledby="titulo-principal">
+            <div class="destaque-container">
+                <div class="destaque-imagem">
+                    <img src="assets/imagens/bombonas-principal.jpeg" width="450" alt="Bombonas e Embalagens Plásticas Industriais">
+                </div>
+                <div class="destaque-texto">
+                    <h1 id="titulo-principal">
+                        INDÚSTRIA E COMÉRCIO DE EMBALAGENS PLÁSTICAS INDUSTRIAIS
+                    </h1>
+                    <p>
+                        Soluções em embalagens plásticas de alta qualidade com tecnologia avançada para diversos segmentos industriais.
+                    </p>
+                    <a href="pages/orcamento.html" class="btn-orcamento">Solicitar Orçamento</a>
                 </div>
             </div>
         </section>
 
         <!-- SEÇÃO SOBRE A EMPRESA (RESUMO) -->
-        <article class="sobre-empresa py-5">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 text-center text-lg-start">
-                        <h2 class="h3 text-primary mb-3">Sobre a Incepi do Brasil</h2>
-                        <p class="text-muted">
-                            Fundada em maio de 1989 em São Paulo, a <strong>Incepi do Brasil</strong> conquistou seu espaço no mercado de embalagens plásticas mantendo o compromisso de fabricar produtos de alta qualidade e com constante inovação tecnológica.
-                        </p>
-                        <p class="text-muted">
-                            Desenvolvemos uma linha diversificada de embalagens com capacities que variam de <strong>3,8 litros, 5 litros (em três modelos exclusivos), 20 litros, 25 litros até 50 litros</strong>, utilizando matérias-primas de primeira linha e mão de obra especializada para atender com excelência a todos os nossos clientes e parceiros.
-                        </p>
-                        <a href="pages/empresa.html" class="btn btn-outline-primary mt-2">Saiba mais sobre a nossa história &rarr;</a>
-                    </div>
-                </div>
+        <section class="sobre-empresa" aria-labelledby="titulo-sobre">
+            <div class="sobre-container">
+                <h2 id="titulo-sobre">Sobre a Incepi do Brasil</h2>
+                <p>
+                    Fundada em maio de 1989 em São Paulo, a <strong>Incepi do Brasil</strong> conquistou seu espaço no mercado de embalagens plásticas mantendo o compromisso de fabricar produtos de alta qualidade e com constante inovação tecnológica.
+                </p>
+                <p>
+                    Desenvolvemos uma linha diversificada de embalagens com capacidades que variam de <strong>3,8 litros, 5 litros (em três modelos exclusivos), 20 litros, 25 litros até 50 litros</strong>, utilizando matérias-primas de primeira linha e mão de obra especializada para atender com excelência a todos os nossos clientes e parceiros.
+                </p>
+                <a href="pages/empresa.html" class="link-saiba-mais">Saiba mais sobre a nossa história &rarr;</a>
             </div>
-        </article>
+        </section>
     </main>
 
-    <footer class="site-footer text-center p-3 bg-light border-top">
-        <address class="m-0">
+    <footer class="site-footer">
+        <address>
             Rua Aparecida de São Manuel nº376/384 - Vila Nova York<br>
             São Paulo - SP - Brasil | Cep:03480-010<br>
             TEL: <a href="tel:551127215156">(11) 2721-5156</a> - <a href="mailto:vendas@incepi.com.br">VENDAS@INCEPI.COM.BR</a>

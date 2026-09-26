@@ -5,44 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contato | Incepi do Brasil - Indústria e Comércio de Embalagens Plásticas Industriais Ltda</title>
         <link rel="icon" href="../assets/imagens/icon-site.png" type="image/png">
+        <link rel="stylesheet" href="../assets/css/styles.css">
     </head>
     <body>
 
         <header class="site-header">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
+            <nav class="navbar">
+                <div class="header-container">
                     <a href="../index.html">
-                        <img src="../assets/imagens/Logo.png" width="350" alt="Logo Incepi do Brasil" class="img-fluid">
+                        <img src="../assets/imagens/Logo.png" width="350" alt="Logo Incepi do Brasil">
                     </a>
 
-                    <div class="collapse navbar-collapse py-1" id="navbarsPrincipal">
-                        <ul class="navbar-nav m-auto mb-2 mb-md-0">
-                            <li class="nav-item">
-                                <a href="../index.html" class="nav-link">Home</a>
+                    <div id="navbarsPrincipal">
+                        <ul>
+                            <li>
+                                <a href="../index.html">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="../pages/produtos.html" class="nav-link">Produtos</a>
+                            <li>
+                                <a href="../pages/produtos.html">Produtos</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="../pages/orcamento.html" class="nav-link">Orçamento</a>
+                            <li>
+                                <a href="../pages/orcamento.html">Orçamento</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="../pages/aplicacao.html" class="nav-link">Aplicação</a>
+                            <li>
+                                <a href="../pages/aplicacao.html">Aplicação</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="../pages/tipos-de-plastico.html" class="nav-link">Tipos de Plástico</a>
+                            <li>
+                                <a href="../pages/tipos-de-plastico.html">Tipos de Plástico</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="../pages/qualidade.html" class="nav-link">Qualidade</a>
+                            <li>
+                                <a href="../pages/qualidade.html">Qualidade</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="../pages/trabalhe-conosco.html" class="nav-link">Trabalhe Conosco</a>
+                            <li>
+                                <a href="../pages/trabalhe-conosco.html">Trabalhe Conosco</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="../pages/contato.html" class="nav-link active">Contato</a>
+                            <li>
+                                <a href="../pages/contato.html" class="active" aria-current="page">Contato</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="../pages/empresa.html" class="nav-link">Empresa</a>
+                            <li>
+                                <a href="../pages/empresa.html">Empresa</a>
                             </li>
                         </ul>
                     </div>
@@ -51,7 +52,7 @@
         </header>
 
         <main id="conteudo-principal">
-            <section aria-labelledby="titulo-contato" class="text-center">
+            <section aria-labelledby="titulo-contato" class="secao-contato">
                 <h1 id="titulo-contato">Contato</h1>
                 
                 <h2>INCEPI DO BRASIL INDÚSTRIA E COMÉRCIO DE EMBALAGENS PLÁSTICAS INDUSTRIAIS LTDA.</h2>
@@ -77,6 +78,45 @@
                     </div>
                 </section>
 
+                <!-- Formulário de Contato -->
+                <section aria-labelledby="titulo-formulario" class="secao-formulario">
+                    <h2 id="titulo-formulario">Fale Conosco</h2>
+                    <form action="#" method="post" class="form-contato">
+                        <div>
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+
+                        <div>
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div>
+                            <label for="telefone">Telefone / WhatsApp:</label>
+                            <input type="tel" id="telefone" name="telefone">
+                        </div>
+
+                        <div>
+                            <label for="assunto">Assunto:</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="duvidas">Dúvidas Gerais</option>
+                                <option value="orcamento">Orçamento / Vendas</option>
+                                <option value="suporte">Suporte ao Cliente</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit">Enviar Mensagem</button>
+                    </form>
+                </section>
+
                 <!-- Integração com Google Maps -->
                 <div class="mapa-container">
                     <iframe 
@@ -92,7 +132,7 @@
             </section>
         </main>
 
-        <footer class="site-footer text-center p-3">
+        <footer class="site-footer">
             <address>
                 Rua Aparecida de São Manuel nº376/384 - Vila Nova York<br>
                 São Paulo - SP - Brasil | Cep:03480-010<br>

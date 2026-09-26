@@ -5,54 +5,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Orçamento | Incepi do Brasil - Indústria e Comércio de Embalagens Plásticas Industriais Ltda</title>
         <link rel="icon" href="../assets/imagens/icon-site.png" type="image/png">
+        <link rel="stylesheet" href="../assets/css/style.css">
     </head>
     <body>
 
         <header class="site-header">
+            <div class="header-container">
+                <a href="../index.html" class="logo-link">
+                    <img src="../assets/imagens/Logo.png" width="350" alt="Logo Incepi do Brasil" class="logo-img">
+                </a>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <a href="../index.html">
-                <img src="../assets/imagens/Logo.png"  width="350" alt="Logo Incepi do Brasil" class="img-fluid">
-            </a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/produtos.html" class="nav-link">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/orcamento.html" class="nav-link active">Orçamento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/aplicacao.html" class="nav-link">Aplicação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/tipos-de-plastico.html" class="nav-link">Tipos de Plástico</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/qualidade.html" class="nav-link">Qualidade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/trabalhe-conosco.html" class="nav-link">Trabalhe Conosco</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/contato.html" class="nav-link">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/empresa.html" class="nav-link">Empresa</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-
-            <div class="collapse navbar-collapse py-1" id="navbarsPrincipal">
-                        <ul class="navbar-nav m-auto mb-2 mb-md-0">
-                            <li class="nav-item">
-                                <a href="../index.html" class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../pages/produtos.html" class="nav-link">Produtos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../pages/orcamento.html" class="nav-link active">Orçamento</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../pages/aplicacao.html" class="nav-link">Aplicação</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../pages/tipos-de-plastico.html" class="nav-link">Tipos de Plástico</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../pages/qualidade.html" class="nav-link">Qualidade</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../pages/trabalhe-conosco.html" class="nav-link">Trabalhe Conosco</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../pages/contato.html" class="nav-link">Contato</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../pages/empresa.html" class="nav-link">Empresa</a>
-                            </li>
-                        </ul>
-                    </div>
-        </div>
-    </nav>
-</header>
         <main id="conteudo-principal">
-            <section aria-labelledby="titulo-orcamento">
+            <section class="secao-orcamento" aria-labelledby="titulo-orcamento">
                 <h1 id="titulo-orcamento">Solicitação de Orçamento</h1>
                 
                 <p>Preencha o formulário abaixo para receber uma cotação personalizada diretamente da nossa equipe de vendas. Trabalhamos com soluções em embalagens plásticas industriais de alta resistência para atender a demanda do seu negócio com máxima eficiência, segurança e pontualidade.</p>
@@ -60,32 +58,28 @@
 
                 <hr>
 
-                <form action="enviar-orcamento.php" method="post" class="form-orcamento-detalhado">
+                <form action="enviar-orcamento.php" method="post" class="form-orcamento">
                     
-                    <fieldset>
+                    <fieldset class="form-grupo">
                         <legend>Dados de Contato e Empresa</legend>
-                        <br>
 
-                        <div>
-                            <label for="nome">Nome Completo:*</label><br>
+                        <div class="campo-form">
+                            <label for="nome">Nome Completo:*</label>
                             <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
                         </div>
-                        <br>
 
-                        <div>
-                            <label for="empresa">Razão Social / Nome da Empresa:*</label><br>
+                        <div class="campo-form">
+                            <label for="empresa">Razão Social / Nome da Empresa:*</label>
                             <input type="text" id="empresa" name="empresa" required placeholder="Nome da sua empresa">
                         </div>
-                        <br>
 
-                        <div>
-                            <label for="cnpj">CNPJ:*</label><br>
+                        <div class="campo-form">
+                            <label for="cnpj">CNPJ:*</label>
                             <input type="text" id="cnpj" name="cnpj" required placeholder="00.000.000/0000-00">
                         </div>
-                        <br>
 
-                        <div>
-                            <label for="email">E-mail Corporativo:*</label><br>
+                        <div class="campo-form">
+                            <label for="email">E-mail Corporativo:*</label>
                             <input 
                                 type="email" 
                                 id="email" 
@@ -95,10 +89,9 @@
                                 placeholder="seuemail@suaempresa.com.br"
                                 title="Digite um e-mail válido no formato: nome@dominio.com">
                         </div>
-                        <br>
 
-                        <div>
-                            <label for="telefone">Telefone / WhatsApp:*</label><br>
+                        <div class="campo-form">
+                            <label for="telefone">Telefone / WhatsApp:*</label>
                             <input 
                                 type="tel" 
                                 id="telefone" 
@@ -109,16 +102,14 @@
                                 placeholder="(11) 99999-9999"
                                 title="Digite o DDD e o número (ex: 11999999999 ou (11) 99999-9999)">
                         </div>
-                        <br>
 
-                        <div>
-                            <label for="cidade">Cidade:*</label><br>
+                        <div class="campo-form">
+                            <label for="cidade">Cidade:*</label>
                             <input type="text" id="cidade" name="cidade" required placeholder="Sua cidade">
                         </div>
-                        <br>
 
-                        <div>
-                            <label for="estado">Estado (UF):*</label><br>
+                        <div class="campo-form">
+                            <label for="estado">Estado (UF):*</label>
                             <select id="estado" name="estado" required>
                                 <option value="" disabled selected>Selecione o Estado</option>
                                 <option value="AC">Acre</option>
@@ -152,110 +143,101 @@
                         </div>
                     </fieldset>
 
-                    <br><hr><br>
-
-                    <fieldset>
+                    <fieldset class="form-grupo">
                         <legend>Produtos de Interesse (Selecione um ou mais)</legend>
-                        <p><small>Marque a caixa de seleção de todos os produtos que deseja cotar:</small></p>
+                        <p class="instrucao-selecao"><small>Marque a caixa de seleção de todos os produtos que deseja cotar:</small></p>
 
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-thunder17" name="produtos_interesse[]" value="Thunder 17">
                             <label for="prod-thunder17">Thunder 17</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-thunder20" name="produtos_interesse[]" value="Thunder 20">
                             <label for="prod-thunder20">Thunder 20</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-flask38" name="produtos_interesse[]" value="Flask 3,8">
                             <label for="prod-flask38">Flask 3,8</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-flask17" name="produtos_interesse[]" value="Flask 17">
                             <label for="prod-flask17">Flask 17</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-aro18" name="produtos_interesse[]" value="Aro 18">
                             <label for="prod-aro18">Aro 18</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-aro25" name="produtos_interesse[]" value="Aro 25">
                             <label for="prod-aro25">Aro 25</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-top2080" name="produtos_interesse[]" value="Top 2080">
                             <label for="prod-top2080">Top 2080</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-top20100" name="produtos_interesse[]" value="Top 20100">
                             <label for="prod-top20100">Top 20100</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-top25100" name="produtos_interesse[]" value="Top 25100">
                             <label for="prod-top25100">Top 25100</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-top25120" name="produtos_interesse[]" value="Top 25120">
                             <label for="prod-top25120">Top 25120</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-top50200" name="produtos_interesse[]" value="Top 50200">
                             <label for="prod-top50200">Top 50200</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-top50230" name="produtos_interesse[]" value="Top 50230">
                             <label for="prod-top50230">Top 50230</label>
                         </div>
-                        <div>
+                        <div class="opcao-checkbox">
                             <input type="checkbox" id="prod-tampas" name="produtos_interesse[]" value="Tampas Industriais">
                             <label for="prod-tampas">Tampas Industriais</label>
                         </div>
                     </fieldset>
 
-                    <br><hr><br>
-
-                    <fieldset>
+                    <fieldset class="form-grupo">
                         <legend>Detalhes e Especificações da Cotação</legend>
-                        <br>
 
-                        <div>
-                            <label for="quantidade">Estimativa de Quantidade Total (unidades):*</label><br>
+                        <div class="campo-form">
+                            <label for="quantidade">Estimativa de Quantidade Total (unidades):*</label>
                             <input type="number" id="quantidade" name="quantidade" min="1" required placeholder="Ex: 500">
                         </div>
-                        <br>
 
-                        <div>
-                            <label for="segmento">Segmento da Empresa (Ex: Químico, Alimentício, Farmacêutico, etc.):</label><br>
+                        <div class="campo-form">
+                            <label for="segmento">Segmento da Empresa (Ex: Químico, Alimentício, Farmacêutico, etc.):</label>
                             <input type="text" id="segmento" name="segmento" placeholder="Sua área de atuação">
                         </div>
-                        <br>
 
-                        <div>
-                            <label for="frete">Preferência de Frete:</label><br>
+                        <div class="campo-form">
+                            <label for="frete">Preferência de Frete:</label>
                             <select id="frete" name="frete">
                                 <option value="CIF">CIF (Frete por conta da Incepi)</option>
                                 <option value="FOB">FOB (Frete por conta do cliente / Retirada)</option>
                                 <option value="A combinar">A combinar</option>
                             </select>
                         </div>
-                        <br>
 
-                        <div>
-                            <label for="mensagem">Observações Técnicas / Informações Adicionais:</label><br>
+                        <div class="campo-form">
+                            <label for="mensagem">Observações Técnicas / Informações Adicionais:</label>
                             <textarea id="mensagem" name="mensagem" rows="5" placeholder="Especifique cores desejadas, envase de produtos químicos específicos ou outras necessidades técnicas..."></textarea>
                         </div>
                     </fieldset>
 
-                    <br>
-                    <button type="submit">Enviar Pedido de Orçamento</button>
+                    <button type="submit" class="btn-enviar">Enviar Pedido de Orçamento</button>
                 </form>
             </section>
         </main>
 
-        <footer class="site-footer text-center p-3">
+        <footer class="site-footer">
             <address>
                 Rua Aparecida de São Manuel nº376/384 - Vila Nova York<br>
-                São Paulo - SP - Brasil | Cep:03480-010<br>
+                São Paulo - SP - Brasil | Cep: 03480-010<br>
                 TEL: <a href="tel:551127215156">(11) 2721-5156</a> - <a href="mailto:vendas@incepi.com.br">VENDAS@INCEPI.COM.BR</a>
             </address>      
         </footer>

@@ -5,19 +5,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trabalhe Conosco e Parcerias | Incepi do Brasil - Indústria e Comércio de Embalagens Plásticas Industriais Ltda</title>
         <link rel="icon" href="../assets/imagens/icon-site.png" type="image/png">
-
+        <!-- Vinculação com o arquivo CSS customizado -->
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
 
         <header class="site-header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a href="../index.html">
-                        <img src="../assets/imagens/Logo.png" width="350" alt="Logo Incepi do Brasil" class="img-fluid">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <a href="../index.html" class="logo-link">
+                        <img src="../assets/imagens/Logo.png" alt="Logo Incepi do Brasil" class="logo-img">
                     </a>
 
-                    <div class="collapse navbar-collapse py-1" id="navbarsPrincipal">
-                        <ul class="navbar-nav m-auto mb-2 mb-md-0">
+                    <div class="nav-menu" id="navbarsPrincipal">
+                        <ul class="nav-list">
                             <li class="nav-item">
                                 <a href="../index.html" class="nav-link">Home</a>
                             </li>
@@ -52,19 +53,19 @@
         </header>
 
         <!-- CONTEÚDO PRINCIPAL: TRABALHE CONOSCO E PARCERIAS -->
-        <main id="conteudo-principal" class="container py-5">
-            <section aria-labelledby="titulo-trabalhe-conosco" class="max-width-800 mx-auto" style="max-width: 800px;">
-                <h1 id="titulo-trabalhe-conosco" class="text-primary mb-3 text-center">Trabalhe Conosco & Parcerias</h1>
-                <p class="lead text-muted mb-4 text-center">
+        <main id="conteudo-principal" class="main-container">
+            <section aria-labelledby="titulo-trabalhe-conosco" class="section-content">
+                <h1 id="titulo-trabalhe-conosco" class="page-title text-center">Trabalhe Conosco & Parcerias</h1>
+                <p class="page-description text-center">
                     Quer fazer parte da nossa equipe ou se tornar uma empresa parceira para fornecimento de embalagens plásticas industriais? Preencha o formulário abaixo e entraremos em contato.
                 </p>
 
                 <!-- FORMULÁRIO -->
-                <form action="#" method="POST" enctype="multipart/form-data" class="card shadow-sm p-4 border-light">
+                <form action="#" method="POST" enctype="multipart/form-data" class="form-card">
                     
                     <!-- Tipo de Interesse (Dupla Finalidade) -->
-                    <div class="mb-3">
-                        <label for="tipoInteresse" class="form-label font-weight-bold"><strong>Qual é o seu objetivo de contato? *</strong></label>
+                    <div class="form-group">
+                        <label for="tipoInteresse" class="form-label">Qual é o seu objetivo de contato? *</label>
                         <select class="form-select" id="tipoInteresse" name="tipoInteresse" required>
                             <option value="" selected disabled>Selecione uma opção...</option>
                             <option value="trabalhe-conosco">Vaga de Emprego / Enviar Currículo (Candidato)</option>
@@ -75,64 +76,64 @@
                     </div>
 
                     <!-- Dados Principais -->
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label for="nome" class="form-label"><strong>Nome Completo / Nome do Contato *</strong></label>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nome" class="form-label">Nome Completo / Nome do Contato *</label>
                             <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" required>
                         </div>
-                        <div class="col-md-6">
-                            <label for="empresa" class="form-label"><strong>Nome da Empresa</strong> <small class="text-muted">(se for parceria)</small></label>
+                        <div class="form-group">
+                            <label for="empresa" class="form-label">Nome da Empresa <small class="form-note">(se for parceria)</small></label>
                             <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Razão social ou nome fantasia">
                         </div>
                     </div>
 
                     <!-- Contatos -->
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label for="email" class="form-label"><strong>E-mail de Contato *</strong></label>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-mail de Contato *</label>
                             <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@dominio.com" required>
                         </div>
-                        <div class="col-md-6">
-                            <label for="telefone" class="form-label"><strong>Telefone / WhatsApp *</strong></label>
+                        <div class="form-group">
+                            <label for="telefone" class="form-label">Telefone / WhatsApp *</label>
                             <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
                         </div>
                     </div>
 
                     <!-- Área de Interesse / Cidade -->
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label for="area" class="form-label"><strong>Área de Interesse / Cargo Pretendido</strong></label>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="area" class="form-label">Área de Interesse / Cargo Pretendido</label>
                             <input type="text" class="form-control" id="area" name="area" placeholder="Ex: Produção, Vendas, Logística, Compras">
                         </div>
-                        <div class="col-md-6">
-                            <label for="cidade" class="form-label"><strong>Cidade / UF *</strong></label>
+                        <div class="form-group">
+                            <label for="cidade" class="form-label">Cidade / UF *</label>
                             <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Ex: São Paulo - SP" required>
                         </div>
                     </div>
 
                     <!-- Anexo de Arquivo (Currículo ou Apresentação da Empresa) -->
-                    <div class="mb-3">
-                        <label for="arquivoAnexo" class="form-label"><strong>Anexar Currículo ou Apresentação da Empresa</strong> <small class="text-muted">(PDF, DOC, DOCX - Máx 5MB)</small></label>
-                        <input class="form-control" type="file" id="arquivoAnexo" name="arquivoAnexo" accept=".pdf,.doc,.docx">
+                    <div class="form-group">
+                        <label for="arquivoAnexo" class="form-label">Anexar Currículo ou Apresentação da Empresa <small class="form-note">(PDF, DOC, DOCX - Máx 5MB)</small></label>
+                        <input class="form-control-file" type="file" id="arquivoAnexo" name="arquivoAnexo" accept=".pdf,.doc,.docx">
                     </div>
 
                     <!-- Mensagem / Observações -->
-                    <div class="mb-4">
-                        <label for="mensagem" class="form-label"><strong>Mensagem ou Apresentação Breve *</strong></label>
+                    <div class="form-group">
+                        <label for="mensagem" class="form-label">Mensagem ou Apresentação Breve *</label>
                         <textarea class="form-control" id="mensagem" name="mensagem" rows="4" placeholder="Fale um pouco sobre sua experiência profissional ou sobre as necessidades de embalagem da sua empresa..." required></textarea>
                     </div>
 
                     <!-- Botão de Envio -->
-                    <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
                     </div>
 
                 </form>
             </section>
         </main>
 
-        <footer class="site-footer text-center p-3 bg-light border-top">
-            <address class="m-0">
+        <footer class="site-footer">
+            <address class="footer-address">
                 Rua Aparecida de São Manuel nº376/384 - Vila Nova York<br>
                 São Paulo - SP - Brasil | Cep:03480-010<br>
                 TEL: <a href="tel:551127215156">(11) 2721-5156</a> - <a href="mailto:vendas@incepi.com.br">VENDAS@INCEPI.COM.BR</a>

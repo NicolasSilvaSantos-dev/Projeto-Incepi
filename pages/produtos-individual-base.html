@@ -3,67 +3,64 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Essa Pagina é a base usada nas paginas de produtos individuais
-         ela não contem nenhuma informação de produtos apenas locais para substitução -->
+        <!-- Essa página é o modelo para as páginas de produtos individuais em pages/produtos/ -->
         <title><!-- SUBSTITUIR: Nome do Produto --> | Incepi do Brasil</title>
         
-        <link rel="icon" href="../assets/imagens/icon-site.png" type="image/png">
+        <link rel="icon" href="../../assets/imagens/icon-site.png" type="image/png">
+        <link rel="stylesheet" href="../../assets/css/style.css">
     </head>
     <body>
 
         <header class="site-header">
+            <div class="header-container">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../../assets/imagens/Logo.png" width="350" alt="Logo Incepi do Brasil" class="logo-img">
+                </a>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <a href="../index.html">
-                <img src="../assets/imagens/Logo.png"  width="350" alt="Logo Incepi do Brasil" class="img-fluid">
-            </a>
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="../../index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../pages/produtos.html" class="nav-link active">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../pages/orcamento.html" class="nav-link">Orçamento</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../pages/aplicacao.html" class="nav-link">Aplicação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../pages/tipos-de-plastico.html" class="nav-link">Tipos de Plástico</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../pages/qualidade.html" class="nav-link">Qualidade</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../pages/trabalhe-conosco.html" class="nav-link">Trabalhe Conosco</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../pages/contato.html" class="nav-link">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../pages/empresa.html" class="nav-link">Empresa</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-
-            <div class="collapse navbar-collapse py-1" id="navbarsPrincipal">
-                        <ul class="navbar-nav m-auto mb-2 mb-md-0">
-                            <li class="nav-item">
-                                <a href="../../index.html" class="nav-link">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../pages/produtos.html" class="nav-link active">Produtos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../pages/orcamento.html" class="nav-link">Orçamento</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../pages/aplicacao.html" class="nav-link">Aplicação</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../pages/tipos-de-plastico.html" class="nav-link">Tipos de Plástico</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../pages/qualidade.html" class="nav-link">Qualidade</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../pages/trabalhe-conosco.html" class="nav-link">Trabalhe Conosco</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../pages/contato.html" class="nav-link">Contato</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="../../pages/empresa.html" class="nav-link">Empresa</a>
-                            </li>
-                        </ul>
-                    </div>
-        </div>
-    </nav>
-</header>
         <main id="conteudo-principal">
             <article class="produto-detalhe">
                 <!-- SUBSTITUIR: Nome principal do produto -->
-                <h1>nome do produto</h1>
+                <h1><!-- SUBSTITUIR: Nome do produto --></h1>
 
                 <section class="produto-principal">
                     <div class="produto-midia">
                         <figure>
                             <!-- SUBSTITUIR: Caminho da imagem principal e texto alternativo -->
-                            <img src="../assets/imagens/top25GD.jpg" alt="<!-- SUBSTITUIR: Nome do Produto -->">
+                            <img src="../../assets/imagens/top25GD.jpg" alt="<!-- SUBSTITUIR: Nome do Produto -->" class="produto-img">
                         </figure>
                         <!-- SUBSTITUIR: Código ou modelo comercial -->
                         <p><strong>PRODUTO:</strong> <!-- SUBSTITUIR: Código/Modelo --></p>
@@ -73,7 +70,7 @@
 
                     <div class="produto-especificacoes">
                         <h2>Características</h2>
-                        <table>
+                        <table class="tabela-especificacoes">
                             <tbody>
                                 <tr>
                                     <th scope="row">Cor</th>
@@ -132,11 +129,11 @@
 
                 <section class="produto-fechamento">
                     <h2>Fechamento e Detalhes</h2>
-                    <div>
+                    <div class="fechamento-info">
                         <!-- SUBSTITUIR: Matéria-prima do sistema de fechamento/tampa -->
                         <p><strong>MATÉRIA-PRIMA BÁSICA:</strong><br><!-- SUBSTITUIR: Matéria-Prima da Tampa --></p>
                         <p><strong>FECHAMENTO:</strong></p>
-                        <ul>
+                        <ul class="lista-fechamento">
                             <!-- SUBSTITUIR: Adicione ou remova itens da lista de fechamento conforme o produto -->
                             <li>TAMPA COM LACRE</li>
                             <li>VÁLVULA DE SEGURANÇA</li>
@@ -145,8 +142,8 @@
                     </div>
                     <div class="fotos-fechamento">
                         <!-- SUBSTITUIR: Imagens detalhadas da tampa/fechamento -->
-                        <img src="../assets/imagens/SUBSTITUIR-imagem-detalhe-tampa-1.jpg" alt="Tampa - Incepi do Brasil">
-                        <img src="../assets/imagens/SUBSTITUIR-imagem-detalhe-tampa-2.jpg" alt="Tampa - Incepi do Brasil">
+                        <img src="../../assets/imagens/SUBSTITUIR-imagem-detalhe-tampa-1.jpg" alt="Tampa - Incepi do Brasil">
+                        <img src="../../assets/imagens/SUBSTITUIR-imagem-detalhe-tampa-2.jpg" alt="Tampa - Incepi do Brasil">
                     </div>
                 </section>
 
@@ -154,7 +151,7 @@
 
                 <section class="produto-manuseio">
                     <h2>Manuseio</h2>
-                    <ul>
+                    <ul class="lista-manuseio">
                         <!-- SUBSTITUIR: Instruções técnicas de manuseio e transporte -->
                         <li><!-- SUBSTITUIR: Instrução de Manuseio 1 --></li>
                         <li><!-- SUBSTITUIR: Instrução de Manuseio 2 --></li>
@@ -167,22 +164,22 @@
 
                 <section class="produto-orcamento">
                     <h2>Solicitar Cotação para este Produto</h2>
-                    <form action="enviar-orcamento.php" method="post">
+                    <form action="enviar-orcamento.php" method="post" class="form-produto-orcamento">
                         <!-- SUBSTITUIR: Nome exato do produto que será enviado via formulário -->
                         <input type="hidden" name="produto_interesse" value="<!-- SUBSTITUIR: Nome do Produto -->">
 
-                        <div>
-                            <label for="nome">Nome Completo:*</label><br>
-                            <input type="text" id="nome" name="nome" required>
+                        <div class="campo-form">
+                            <label for="nome">Nome Completo:*</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
                         </div>
 
-                        <div>
-                            <label for="email">E-mail:*</label><br>
-                            <input type="email" id="email" name="email" required>
+                        <div class="campo-form">
+                            <label for="email">E-mail:*</label>
+                            <input type="email" id="email" name="email" required placeholder="seuemail@suaempresa.com.br">
                         </div>
 
-                        <div>
-                            <label for="telefone">Telefone / WhatsApp:*</label><br>
+                        <div class="campo-form">
+                            <label for="telefone">Telefone / WhatsApp:*</label>
                             <input 
                                 type="tel" 
                                 id="telefone" 
@@ -194,33 +191,32 @@
                                 title="Digite o DDD e o número (ex: 11999999999 ou (11) 99999-9999)">
                         </div>
 
-                        <div>
-                            <label for="empresa">Empresa:</label><br>
-                            <input type="text" id="empresa" name="empresa">
+                        <div class="campo-form">
+                            <label for="empresa">Empresa:</label>
+                            <input type="text" id="empresa" name="empresa" placeholder="Nome da sua empresa">
                         </div>
 
-                        <div>
-                            <label for="quantidade">Quantidade Desejada (unidades):*</label><br>
-                            <input type="number" id="quantidade" name="quantidade" min="1" required>
+                        <div class="campo-form">
+                            <label for="quantidade">Quantidade Desejada (unidades):*</label>
+                            <input type="number" id="quantidade" name="quantidade" min="1" required placeholder="Ex: 100">
                         </div>
 
-                        <div>
-                            <label for="mensagem">Observações / Mensagem:</label><br>
-                            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                        <div class="campo-form">
+                            <label for="mensagem">Observações / Mensagem:</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva observações adicionais..."></textarea>
                         </div>
 
-                        <br>
-                        <button type="submit">Enviar Solicitação de Orçamento</button>
+                        <button type="submit" class="btn-enviar">Enviar Solicitação de Orçamento</button>
                     </form>
                 </section>
 
             </article>
         </main>
 
-        <footer class="site-footer text-center p-3">
+        <footer class="site-footer">
             <address>
                 Rua Aparecida de São Manuel nº376/384 - Vila Nova York<br>
-                São Paulo - SP - Brasil | Cep:03480-010<br>
+                São Paulo - SP - Brasil | Cep: 03480-010<br>
                 TEL: <a href="tel:551127215156">(11) 2721-5156</a> - <a href="mailto:vendas@incepi.com.br">VENDAS@INCEPI.COM.BR</a>
             </address>      
         </footer>

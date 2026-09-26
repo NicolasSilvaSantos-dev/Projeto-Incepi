@@ -3,23 +3,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Aro 18 | Incepi do Brasil</title>
-        
+        <title>Aro 18 | Incepi do Brasil - Indústria e Comércio de Embalagens Plásticas Industriais Ltda</title>
         <link rel="icon" href="../../assets/imagens/icon-site.png" type="image/png">
+        <!-- Vinculação com o arquivo CSS customizado -->
+        <link rel="stylesheet" href="../../css/style.css">
     </head>
     <body>
 
         <header class="site-header">
+            <nav class="navbar">
+                <div class="nav-container">
+                    <a href="../../index.html" class="logo-link">
+                        <img src="../../assets/imagens/Logo.png" alt="Logo Incepi do Brasil" class="logo-img">
+                    </a>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <a href="../../index.html">
-                <img src="../../assets/imagens/Logo.png"  width="350" alt="Logo Incepi do Brasil" class="img-fluid">
-            </a>
-
-
-            <div class="collapse navbar-collapse py-1" id="navbarsPrincipal">
-                        <ul class="navbar-nav m-auto mb-2 mb-md-0">
+                    <div class="nav-menu" id="navbarsPrincipal">
+                        <ul class="nav-list">
                             <li class="nav-item">
                                 <a href="../../index.html" class="nav-link">Home</a>
                             </li>
@@ -49,28 +48,27 @@
                             </li>
                         </ul>
                     </div>
-        </div>
-    </nav>
-</header>
-        <main id="conteudo-principal">
+                </div>
+            </nav>
+        </header>
+
+        <!-- CONTEÚDO PRINCIPAL: DETALHES DO PRODUTO -->
+        <main id="conteudo-principal" class="main-container">
             <article class="produto-detalhe">
-                <h1>Aro 18</h1>
+                <h1 class="page-title">Aro 18</h1>
 
                 <section class="produto-principal">
                     <div class="produto-midia">
-                        <figure>
-                            <!-- SUBSTITUIR: Caminho da imagem principal e texto alternativo -->
-                            <img src="../../assets/imagens/aro18GD.jpg" alt="Aro 18">
+                        <figure class="produto-foto">
+                            <img src="../../assets/imagens/aro18GD.jpg" alt="Embalagem Plástica Aro 18" class="img-destaque">
                         </figure>
-                        <!-- SUBSTITUIR: Código ou modelo comercial -->
-                        <p><strong>PRODUTO:</strong> ARO/18</p>
-                        <!-- SUBSTITUIR: Especificação da matéria-prima do corpo -->
-                        <p><strong>MATÉRIA-PRIMA BÁSICA:</strong><br>PEAD HS5502XP Braskem</p>
+                        <p class="produto-info"><strong>PRODUTO:</strong> ARO/18</p>
+                        <p class="produto-info"><strong>MATÉRIA-PRIMA BÁSICA:</strong><br>PEAD HS5502XP Braskem</p>
                     </div>
 
                     <div class="produto-especificacoes">
-                        <h2>Características</h2>
-                        <table>
+                        <h2 class="section-subtitle">Características</h2>
+                        <table class="especificacoes-tabela">
                             <tbody>
                                 <tr>
                                     <th scope="row">Cor</th>
@@ -114,50 +112,47 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">Capacidade</th>
-                                    <td>Nominal: 5L/Real: 5,25L/Head Space: 5%</td>
+                                    <td>Nominal: 5L / Real: 5,25L / Head Space: 5%</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Embalagem</th>
-                                    <td>Sacos de PEAD com 24un dimensões paletizaveis identificação de lote</td>
+                                    <td>Sacos de PEAD com 24un dimensões paletizáveis identificação de lote</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </section>
 
-                <hr>
+                <hr class="divider">
 
                 <section class="produto-fechamento">
-                    <h2>Fechamento e Detalhes</h2>
-                    <div>
-                        <!-- SUBSTITUIR: Matéria-prima do sistema de fechamento/tampa -->
+                    <h2 class="section-subtitle">Fechamento e Detalhes</h2>
+                    <div class="fechamento-info">
                         <p><strong>MATÉRIA-PRIMA BÁSICA:</strong><br>PP CP442 Braskem</p>
                         <p><strong>FECHAMENTO:</strong></p>
-                        <ul>
-                            <!-- SUBSTITUIR: Adicione ou remova itens da lista de fechamento conforme o produto -->
+                        <ul class="fechamento-lista">
                             <li>TAMPA COM LACRE</li>
                             <li>VÁLVULA DE SEGURANÇA</li>
                             <li>PIGMENTAÇÃO</li>
                         </ul>
                     </div>
                     <div class="fotos-fechamento">
-                        <!-- SUBSTITUIR: Imagens detalhadas da tampa/fechamento -->
-                        <img src="../../assets/imagens/tmP-1.jpg" alt="Tampa - Incepi do Brasil">
-                        <img src="../../assets/imagens/tmPval-1.jpg" alt="Tampa - Incepi do Brasil">
+                        <img src="../../assets/imagens/tmP-1.jpg" alt="Tampa com lacre para embalagem Aro 18">
+                        <img src="../../assets/imagens/tmPval-1.jpg" alt="Tampa com válvula de segurança para embalagem Aro 18">
                     </div>
                     <div class="tampa-lacrando">
-                        <video width="340" height="360" controls autoplay loop muted>
-                        <source src="../../assets/videos/aro18video.mp4" type="video/mp4">
+                        <video class="video-demonstracao" controls autoplay loop muted>
+                            <source src="../../assets/videos/aro18video.mp4" type="video/mp4">
+                            Seu navegador não suporta a exibição de vídeos.
                         </video>
                     </div>
                 </section>
 
-                <hr>
+                <hr class="divider">
 
                 <section class="produto-manuseio">
-                    <h2>Manuseio</h2>
-                    <ul>
-                        <!-- SUBSTITUIR: Instruções técnicas de manuseio e transporte -->
+                    <h2 class="section-subtitle">Manuseio</h2>
+                    <ul class="manuseio-lista">
                         <li>ALÇA PROJETADA PARA MELHOR TRANSPORTE.</li>
                         <li>EMPILHAMENTO APÓS ENVASE SOBRE PALLET.</li>
                         <li>EMPILHAMENTO : 03 CAIXAS DE ALTURA.</li>
@@ -165,66 +160,71 @@
                     </ul>
                 </section>
 
-                <hr>
+                <hr class="divider">
 
                 <section class="produto-orcamento">
-                    <h2>Solicitar Cotação para este Produto</h2>
-                    <form action="enviar-orcamento.php" method="post">
-                        <!-- SUBSTITUIR: Nome exato do produto que será enviado via formulário -->
+                    <h2 class="section-subtitle">Solicitar Cotação para este Produto</h2>
+                    <form action="enviar-orcamento.php" method="POST" class="form-card">
                         <input type="hidden" name="produto_interesse" value="Aro 18">
 
-                        <div>
-                            <label for="nome">Nome Completo:*</label><br>
-                            <input type="text" id="nome" name="nome" required>
+                        <div class="form-group">
+                            <label for="nome" class="form-label">Nome Completo: *</label>
+                            <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite seu nome completo" required>
                         </div>
 
-                        <div>
-                            <label for="email">E-mail:*</label><br>
-                            <input type="email" id="email" name="email" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">E-mail: *</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="seuemail@dominio.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefone" class="form-label">Telefone / WhatsApp: *</label>
+                                <input 
+                                    type="tel" 
+                                    id="telefone" 
+                                    name="telefone" 
+                                    class="form-control" 
+                                    required 
+                                    maxlength="15"
+                                    pattern="(\([0-9]{2}\)\s?|[0-9]{2}\s?)[0-9]{4,5}-?[0-9]{4}" 
+                                    placeholder="(11) 99999-9999"
+                                    title="Digite o DDD e o número (ex: 11999999999 ou (11) 99999-9999)">
+                            </div>
                         </div>
 
-                        <div>
-                            <label for="telefone">Telefone / WhatsApp:*</label><br>
-                            <input 
-                                type="tel" 
-                                id="telefone" 
-                                name="telefone" 
-                                required 
-                                maxlength="15"
-                                pattern="(\([0-9]{2}\)\s?|[0-9]{2}\s?)[0-9]{4,5}-?[0-9]{4}" 
-                                placeholder="(11) 99999-9999"
-                                title="Digite o DDD e o número (ex: 11999999999 ou (11) 99999-9999)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="empresa" class="form-label">Empresa:</label>
+                                <input type="text" id="empresa" name="empresa" class="form-control" placeholder="Razão social ou nome fantasia">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="quantidade" class="form-label">Quantidade Desejada (unidades): *</label>
+                                <input type="number" id="quantidade" name="quantidade" class="form-control" min="1" placeholder="Ex: 500" required>
+                            </div>
                         </div>
 
-                        <div>
-                            <label for="empresa">Empresa:</label><br>
-                            <input type="text" id="empresa" name="empresa">
+                        <div class="form-group">
+                            <label for="mensagem" class="form-label">Observações / Mensagem:</label>
+                            <textarea id="mensagem" name="mensagem" class="form-control" rows="4" placeholder="Escreva observações adicionais sobre o produto ou necessidades do pedido..."></textarea>
                         </div>
 
-                        <div>
-                            <label for="quantidade">Quantidade Desejada (unidades):*</label><br>
-                            <input type="number" id="quantidade" name="quantidade" min="1" required>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-submit">Enviar Solicitação de Orçamento</button>
                         </div>
-
-                        <div>
-                            <label for="mensagem">Observações / Mensagem:</label><br>
-                            <textarea id="mensagem" name="mensagem" rows="4"></textarea>
-                        </div>
-
-                        <br>
-                        <button type="submit">Enviar Solicitação de Orçamento</button>
                     </form>
                 </section>
 
             </article>
         </main>
 
-        <footer class="site-footer text-center p-3">
-            <address>
+        <footer class="site-footer">
+            <address class="footer-address">
                 Rua Aparecida de São Manuel nº376/384 - Vila Nova York<br>
                 São Paulo - SP - Brasil | Cep:03480-010<br>
                 TEL: <a href="tel:551127215156">(11) 2721-5156</a> - <a href="mailto:vendas@incepi.com.br">VENDAS@INCEPI.COM.BR</a>
-            </address>      
+            </address>     
         </footer>
 
     </body>
