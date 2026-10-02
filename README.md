@@ -24,7 +24,23 @@ Este projeto de desenvolvimento do novo site visa alinhar a presença digital da
 
 ## Durante o Desenvolvimento
 
-Ao longo da criação do projeto, nosso principal desafio foi a página dos produtos e a inclusão de áudio e vídeo, mas aprendemos e fizemos o nosso melhor. Até o momento, foi um projeto extremamente divertido de criar.
+Este projeto representou um grande marco de aprendizado prático para a nossa equipe. Como foi a nossa primeira experiência utilizando o Visual Studio Code, passamos por uma curva de aprendizado inicial para compreender a estrutura de arquivos e a interface da ferramenta, mas logo nos familiarizamos com o ambiente de desenvolvimento.
+
+Ao longo da criação do projeto, enfrentamos e superamos os seguintes desafios:
+
+**Página de Produtos e Mídia:** A construção da página principal de produtos e a integração correta de elementos de áudio e vídeo exigiram bastante pesquisa e testes.
+
+**Mapeamento de Arquivos:** Tivemos obstáculos iniciais para gerenciar os caminhos (paths) e referenciar as imagens corretamente dentro da estrutura de pastas.
+
+**Estilização e Posicionamento (CSS)**: Durante a etapa de design e definição visual do site, posicionar os botões corretamente na interface se mostrou um desafio que nos ajudou a evoluir nossa compreensão sobre layouts.  
+
+## Conclusão
+
+A conclusão deste projeto representa muito mais do que a entrega de um novo site; é a modernização da vitrine digital da Incepi do Brasil. O objetivo central é alinhar a plataforma online com a excelência técnica e a vanguarda do parque fabril que a empresa mantém desde 1989. Agora, o portal transmite a mesma segurança, qualidade e confiança que os clientes já conhecem em nossas embalagens de alta performance.
+
+Como colaborador da Incepi, desenvolver este portal teve um significado especial. Foi uma experiência técnica extremamente divertida e enriquecedora. Superar os desafios ao longo da criação, especialmente na estruturação da página de produtos e na integração de áudios e vídeos, nos trouxe grandes aprendizados e a certeza estarmos entregando o nosso melhor.
+
+Gostaria de deixar um agradecimento especial ao Sr. Claudio, um dos proprietários da empresa. Quando surgiu a oportunidade de criar um site, busquei o setor administrativo e ele não apenas autorizou o projeto imediatamente, mas também acreditou na ideia.  
 
 ## Site no (GitHub Pages)
   
