@@ -1,7 +1,34 @@
 @charset "UTF-8";
 
-*{
+@import url("header.css");
+
+/* CSS de limpeza formatação padrão do CSS */
+*, *::before, *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Garante que padding e border não quebrem o tamanho do elemento */
+    list-style: none;
 }
+
+body {
+    min-height: 100vh;
+    font-family: sans-serif; /* Define uma fonte padrão base */
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* Coloque os estilos abaixo */
+
