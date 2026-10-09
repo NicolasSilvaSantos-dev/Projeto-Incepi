@@ -41,7 +41,7 @@ function destacarMenuAtivo() {
             return;
         }
 
-        // 2. REGRA PADRÃO PARA AS DEMAIS PÁGINAS (Home, Empresa, Contato, etc.):
+        // 2. REGRA PADRÃO PARA AS DEMAIS PÁGINAS
         if (linkHref && (paginaAtual.endsWith(linkHref) || linkHref === paginaAtual)) {
             link.classList.add('active');
         }
