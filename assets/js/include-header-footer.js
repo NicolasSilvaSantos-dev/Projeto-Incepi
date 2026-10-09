@@ -1,48 +1,59 @@
+// 1. Descobre a raiz correta do site ANTES de tudo (Escopo Global)
+const repoName = window.location.pathname.split('/')[1];
+const isGitHubPages = window.location.hostname.includes('github.io');
+const basePath = isGitHubPages ? `/${repoName}` : '';
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Busca simultaneamente o header e o footer
+    // 2. Busca simultaneamente usando o basePath correto
     Promise.all([
-        fetch('./components/header.html').then(res => res.text()),
-        fetch('./components/footer.html').then(res => res.text())
+        fetch(`${basePath}/components/header.html`).then(res => {
+            if (!res.ok) throw new Error('Erro ao carregar o header');
+            return res.text();
+        }),
+        fetch(`${basePath}/components/footer.html`).then(res => {
+            if (!res.ok) throw new Error('Erro ao carregar o footer');
+            return res.text();
+        })
     ])
     .then(([headerHtml, footerHtml]) => {
-        // 1. Injeta o Header no INÍCIO do body
+        // 3. Injeta o Header no INÍCIO do body e o Footer no FINAL
         document.body.insertAdjacentHTML('afterbegin', headerHtml);
-
-        // 2. Injeta o Footer no FINAL do body
         document.body.insertAdjacentHTML('beforeend', footerHtml);
 
-        // 3. Executa a marcação do menu ativo
+        // 4. Executa a marcação do menu ativo DEPOIS que o HTML foi injetado
         destacarMenuAtivo();
     })
     .catch(error => console.error('Erro ao carregar header/footer:', error));
 });
 
 function destacarMenuAtivo() {
-    // Obtém o caminho da URL atual em minúsculas
     let paginaAtual = window.location.pathname.toLowerCase();
 
-    // Trata a raiz do site para coincidir com /index.html
-    if (paginaAtual === '/' || paginaAtual === '') {
+    // Se estiver na raiz, padroniza para index.html
+    if (paginaAtual === '/' || paginaAtual === '' || paginaAtual === `${basePath.toLowerCase()}/`) {
         paginaAtual = '/index.html';
     }
 
     const links = document.querySelectorAll('#navbarsPrincipal ul li a');
 
     links.forEach(link => {
-        const linkHref = link.getAttribute('href').toLowerCase();
-
-        // Remove a classe 'active' antes de verificar
+        let linkHref = link.getAttribute('href');
+        if (!linkHref) return;
+        
+        linkHref = linkHref.toLowerCase();
         link.classList.remove('active');
 
-        // 1. REGRA PARA PÁGINAS INDIVIDUAIS DE PRODUTOS (/pages/produtos/nome-do-produto.html):
-        // Se a URL atual estiver dentro da pasta "/pages/produtos/"
-        if (paginaAtual.includes('/pages/produtos/') && linkHref.includes('produtos.html')) {
+        // Ajuste na lógica para remover caminhos relativos ao comparar
+        const linkLimpo = linkHref.replace(/^\.\.\/|^\.\//, '');
+
+        // 1. REGRA PARA PÁGINAS INDIVIDUAIS DE PRODUTOS
+        if (paginaAtual.includes('/pages/produtos/') && linkLimpo.includes('produtos.html')) {
             link.classList.add('active');
             return;
         }
 
         // 2. REGRA PADRÃO PARA AS DEMAIS PÁGINAS
-        if (linkHref && (paginaAtual.endsWith(linkHref) || linkHref === paginaAtual)) {
+        if (paginaAtual.endsWith(linkLimpo) || paginaAtual === linkLimpo) {
             link.classList.add('active');
         }
     });
