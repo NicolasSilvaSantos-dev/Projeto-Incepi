@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Busca simultaneamente o header e o footer
     Promise.all([
-        fetch('components/header.html').then(res => res.text()),
-        fetch('components/footer.html').then(res => res.text())
+        fetch('./components/header.html').then(res => res.text()),
+        fetch('./components/footer.html').then(res => res.text())
     ])
     .then(([headerHtml, footerHtml]) => {
         // 1. Injeta o Header no INÍCIO do body
