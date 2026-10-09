@@ -20,7 +20,19 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.insertAdjacentHTML('afterbegin', headerHtml);
         document.body.insertAdjacentHTML('beforeend', footerHtml);
 
-        // 4. Executa a marcação do menu ativo DEPOIS que o HTML foi injetado
+        const logo = document.getElementById('logo');
+        if (logo) {
+            // Se o basePath for /meu-repositorio, vira /meu-repositorio/assets/imagens/Logo.png
+            logo.src = `${basePath}/assets/imagens/Logo.png`; 
+        }
+        
+        const linksDinamicos = document.querySelectorAll('.caminho-relativo');
+        linksDinamicos.forEach(link => {
+            const hrefOriginal = link.getAttribute('href');
+            // Junta a raiz correta do repositório com o destino final
+            link.href = `${basePath}/${hrefOriginal}`;
+        });
+
         destacarMenuAtivo();
     })
     .catch(error => console.error('Erro ao carregar header/footer:', error));
