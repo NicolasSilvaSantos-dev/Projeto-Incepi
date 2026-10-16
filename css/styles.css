@@ -32,3 +32,16 @@ a {
 }
 /* Coloque os estilos abaixo */
 
+:root {
+    --cor-principal: #004B87;
+    --cor-secundaria: #444444;
+    --cor-fundo: #ffffff;
+    --cor-texto: #262626;
+    --fonte-principal: 'Montserrat' , sans-serif;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-secundaria);
+
+}
