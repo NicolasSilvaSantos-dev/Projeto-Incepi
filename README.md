@@ -32,7 +32,9 @@ Ao longo da criação do projeto, enfrentamos e superamos os seguintes desafios:
 
 **Mapeamento de Arquivos:** Tivemos obstáculos iniciais para gerenciar os caminhos (paths) e referenciar as imagens corretamente dentro da estrutura de pastas.
 
-**Estilização e Posicionamento (CSS)**: Durante a etapa de design e definição visual do site, posicionar os botões corretamente na interface se mostrou um desafio que nos ajudou a evoluir nossa compreensão sobre layouts.  
+**Estilização e Posicionamento (CSS)**: Durante a etapa de design e definição visual do site, posicionar os botões corretamente na interface se mostrou um desafio que nos ajudou a evoluir nossa compreensão sobre layouts. 
+
+**Cores e Tipografia**: Dia 16/10/26 - Nos baseamos nas cores que a empresa representa e fizemos pequenas alterações com base na nossa pesquisa de mercado na área relacionada, verificamos que a principal cor usada é o azul, o que vai exatamente de acordo com o modelo do nosso site, nosso primeiro teste foi com está tonalidade de azul #004B87 definida como cor principal e está #4faaff outra tonalidade de azul definida como cor de fundo, mas não ficou agradável. Definimos a fonte principal (Monteserrat) e a secundária (Sans-serif), mas tivemos muita dificuldade para implementar no nosso site, pois não estava importando, mas depois de muita tentativa e erro conseguimos.     
 
 ## Conclusão
 
