@@ -42,6 +42,7 @@ a {
 
 body {
     font-family: var(--fonte-principal);
-    background-color: var(--cor-secundaria);
-
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
+
