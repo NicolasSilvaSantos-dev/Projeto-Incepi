@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import url("header.css");
+@import url("header-footer.css");
 
 /* CSS de limpeza formatação padrão do CSS */
 *, *::before, *::after {
@@ -33,10 +33,11 @@ a {
 /* Coloque os estilos abaixo */
 
 :root {
-    --cor-principal: #004B87;
+    --cor-principal: #0279da;
     --cor-secundaria: #444444;
-    --cor-fundo: #ffffff;
+    --cor-fundo: #4faaff;
     --cor-texto: #262626;
+    --cor-texto-menu: #026e0b;
     --fonte-principal: 'Montserrat' , sans-serif;
 }
 
