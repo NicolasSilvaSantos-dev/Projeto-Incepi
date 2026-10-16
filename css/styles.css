@@ -16,6 +16,7 @@ body {
     font-family: sans-serif; /* Define uma fonte padrão base */
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    font-weight: 400;
 }
 
 img, picture, video, canvas, svg {
