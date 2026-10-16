@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 @import url("header-footer.css");
+@import url('https://googleapis.com');
 
 /* CSS de limpeza formatação padrão do CSS */
 *, *::before, *::after {
@@ -45,5 +46,22 @@ body {
     font-family: var(--fonte-principal);
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
+}
+
+.destaque-imagem {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente na tela */
+    align-items: center;     /* Centraliza verticalmente (caso o bloco tenha altura) */
+    width: 100%;             /* Garante que o container ocupe a largura toda para poder centralizar */
+    padding: 20px 0;         /* Um espaço opcional acima e abaixo da imagem */
+}
+
+.destaque-imagem img {
+    border: 4px solid #ffffff; /* Espessura, estilo (sólido) e cor da borda (usei branco como exemplo) */
+    border-radius: 8px;        /* Deixa os cantos levemente arredondados para um visual moderno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra opcional para destacar a foto do fundo azul */
+    
+    max-width: 100%;           /* Garante que ela seja responsiva e não quebre em telas de celular */
+    height: auto;
 }
 
