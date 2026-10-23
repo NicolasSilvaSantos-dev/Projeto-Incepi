@@ -33,10 +33,41 @@ document.addEventListener('DOMContentLoaded', () => {
             link.href = `${basePath}/${hrefOriginal}`;
         });
 
+        // Configurações do menu ativadas IMEDIATAMENTE após a injeção do HTML
         destacarMenuAtivo();
+        configurarMenuHamburguer();
     })
     .catch(error => console.error('Erro ao carregar header/footer:', error));
 });
+
+// NOVA FUNÇÃO: Colocada fora para manter a organização do código
+function configurarMenuHamburguer() {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("#navbarsPrincipal");
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", () => {
+            // Liga/Desliga a classe active nos elementos
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+            
+            // Acessibilidade: atualiza o estado do leitor de tela
+            const ariaExpanded = hamburger.getAttribute("aria-expanded") === "true";
+            hamburger.setAttribute("aria-expanded", !ariaExpanded);
+        });
+
+        // Opcional: Fecha o menu se clicar em algum link interno
+        document.querySelectorAll("#navbarsPrincipal a").forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+                hamburger.setAttribute("aria-expanded", "false");
+            });
+        });
+    } else {
+        console.warn("Elementos do menu hamburguer não foram encontrados no DOM.");
+    }
+}
 
 function destacarMenuAtivo() {
     let paginaAtual = window.location.pathname.toLowerCase();
@@ -70,31 +101,3 @@ function destacarMenuAtivo() {
         }
     });
 }
-
-// Aguarda o carregamento do documento/HTML
-document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector("#navbarsPrincipal");
-  
-    if (hamburger && navMenu) {
-      hamburger.addEventListener("click", () => {
-        // Liga/Desliga a classe active nos elementos
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-        
-        // Acessibilidade: atualiza o estado do leitor de tela
-        const ariaExpanded = hamburger.getAttribute("aria-expanded") === "true";
-        hamburger.setAttribute("aria-expanded", !ariaExpanded);
-      });
-  
-      // Opcional: Fecha o menu se clicar em algum link interno
-      document.querySelectorAll("#navbarsPrincipal a").forEach(link => {
-        link.addEventListener("click", () => {
-          hamburger.classList.remove("active");
-          navMenu.classList.remove("active");
-          hamburger.setAttribute("aria-expanded", "false");
-        });
-      });
-    }
-  });
-  
