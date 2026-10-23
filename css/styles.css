@@ -11,12 +11,34 @@
     list-style: none;
 }
 
+/* :root com as variáveis globais de cor e fonte */
+:root {
+    --cor-principal: #0279da;
+    --cor-secundaria: #444444;
+    --cor-fundo: #a4c2da;
+    --cor-texto: #262626;
+    --cor-texto-menu: #026e0b;
+    --fonte-principal: 'Montserrat', sans-serif;
+}
+
+/* BLCO BODY UNIFICADO E CORRIGIDO PARA O COMPORTAMENTO DO FOOTER */
 body {
     min-height: 100vh;
-    font-family: sans-serif; /* Define uma fonte padrão base */
+    display: flex;
+    flex-direction: column; /* Organiza Header, Conteúdo e Footer empilhados verticalmente */
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-weight: 400;
+    margin: 0;
+}
+
+/* GESTÃO DE CONTEÚDO PRINCIPAL (Empurra o footer para o rodapé se a tela for curta) */
+#conteudo-principal {
+    flex: 1 0 auto; 
+    width: 100%;
 }
 
 img, picture, video, canvas, svg {
@@ -32,23 +54,8 @@ a {
     text-decoration: none;
     color: inherit;
 }
-/* Coloque os estilos abaixo */
 
-:root {
-    --cor-principal: #0279da;
-    --cor-secundaria: #444444;
-    --cor-fundo: #a4c2da;
-    --cor-texto: #262626;
-    --cor-texto-menu: #026e0b;
-    --fonte-principal: 'Montserrat', sans-serif;
-}
-
-body {
-    font-family: var(--fonte-principal);
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-}
-
+/* ESTILOS DE IMAGEM DA SEÇÃO DESTAQUE */
 .destaque-imagem {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente na tela */
@@ -58,26 +65,23 @@ body {
 }
 
 .destaque-imagem img {
-    border: 4px solid #ffffff; /* Espessura, estilo (sólido) e cor da borda (usei branco como exemplo) */
-    border-radius: 8px;        /* Deixa os cantos levemente arredondados para um visual moderno */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra opcional para destacar a foto do fundo azul */
-    
-    max-width: 100%;           /* Garante que ela seja responsiva e não quebre em telas de celular */
+    border: 4px solid #ffffff; /* Espessura, estilo (sólido) e cor da borda */
+    border-radius: 8px;        /* Deixa os cantos levemente arredondados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra opcional para destacar a foto */
+    max-width: 100%;           /* Garante que ela seja responsiva no celular */
     height: auto;
 }
 
-/* Adicione no fim do seu arquivo styles.css */
+/* --- RESPONSIVIDADE MOBILE (Telas até 768px) --- */
 @media (max-width: 768px) {
     .destaque-container, .sobre-container {
       padding: 20px;
       text-align: center;
     }
     
-    /* Se sua estrutura original usava flex horizontal no destaque, mude para vertical */
     .destaque-container {
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
-  }
-  
+}

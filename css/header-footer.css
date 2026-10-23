@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-/* --- LAYOUT DO CABEÇALHO (DESKTOP) --- */
+/* --- ESTILOS PADRÃO (DESKTOP) --- */
 .site-header {
     background-color: var(--cor-principal);
-    padding: 15px 20px;
+    padding: 10px 20px; /* Reduzido levemente o espaço interno vertical */
     position: relative;
     width: 100%;
     z-index: 1001;
@@ -14,31 +14,44 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Separa o Logo do Menu/Hambúrguer */
+    justify-content: space-between; 
     align-items: center;
+    gap: 15px; /* Espaço de segurança entre o bloco do logo e o início do menu */
 }
 
-.logo a {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: 1.2rem;
+/* Reduz o tamanho do bloco do logo para dar espaço ao texto */
+.logo {
+    max-width: 180px; /* Impede que o logo ocupe muito espaço na tela */
+    flex-shrink: 0;   /* Garante que o logo não vai esmagar */
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Dá flexibilidade ao menu de navegar */
+#navbarsPrincipal {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end; /* Empurra os links para o canto direito */
 }
 
 #navbarsPrincipal ul {
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Ajuste sutil no espaço entre as palavras */
+    flex-wrap: nowrap; /* IMPEDE TOTALMENTE A QUEBRA DE LINHA NO DESKTOP */
 }
 
 #navbarsPrincipal ul a {
     color: #ffffff;
     font-weight: 700;
+    font-size: 0.95rem; /* Ajuste milimétrico para caber todos os itens lado a lado */
+    white-space: nowrap; /* Garante que termos como "Tipos de Plástico" fiquem na mesma linha */
     transition: opacity 0.2s;
 }
 
-#navbarsPrincipal ul a:hover,
-#navbarsPrincipal ul a.active {
-    opacity: 0.8;
-}
 
 /* Oculta o botão hambúrguer em telas de computador */
 .hamburger {
@@ -81,77 +94,86 @@
 
 /* --- RESPONSIVIDADE MOBILE (Telas até 768px) --- */
 @media (max-width: 768px) {
-    /* Força o botão a aparecer no celular com espaçamento interno */
     .hamburger {
         display: flex;
         padding: 8px;
     }
 
-    /* Ajuste do Header para manter tudo em uma linha sem quebras */
     .site-header {
         padding: 10px 15px;
     }
 
     .header-container {
-        flex-direction: row; /* Garante Logo na esquerda e Hamburguer na direita */
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         gap: 0;
     }
 
-    /* Reduz levemente o tamanho do texto do logo/marca se necessário */
     .logo a {
         font-size: 1.1rem;
-        white-space: nowrap; /* Impede o nome da empresa de quebrar linha */
+        white-space: nowrap;
     }
 
-    /* CORREÇÃO DO FUNDO TRANSPARENTE E POSIÇÃO DA GAVETA */
+    /* GAVETA DO MENU TOTALMENTE ALINHADA */
     #navbarsPrincipal {
         position: absolute;
-        top: 100%; /* Brota exatamente abaixo do limite inferior do cabeçalho */
-        left: -100%;
+        top: 100%;
+        left: -100%; /* Escondido à esquerda por padrão */
         width: 100%;
-        height: auto; /* Deixa o tamanho se ajustar aos links para não cobrir a tela toda */
-        background-color: #0279da; /* Força a cor principal sólida (sem transparência) */
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Sombra suave abaixo do menu aberto */
+        height: auto;
+        background-color: var(--cor-principal);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
         transition: left 0.3s ease-in-out;
-        z-index: 9999; /* Garante que ficará por cima de qualquer elemento da página */
+        z-index: 9999;
     }
 
-    /* Alinhamento interno dos links da lista */
+    /* Força os links a preencherem a largura total do menu de forma simétrica */
     #navbarsPrincipal ul {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 0; /* Remove o gap para controlar pelo padding do link */
-        padding: 15px 0;
+        align-items: stretch; /* Estica as linhas para cobrirem de ponta a ponta */
+        width: 100%;
+        padding: 10px 0;
+        gap: 0;
     }
 
     #navbarsPrincipal ul li {
-        width: 100%; /* Faz a área do clique ocupar a largura inteira */
-        text-align: center;
+        width: 100%;
+        text-align: center; /* Centraliza o texto exatamente no meio da tela */
     }
 
-    /* Ajuste no tamanho e espaçamento das letras */
     #navbarsPrincipal ul a {
         display: block;
-        padding: 12px 0; /* Espaço confortável para o clique do dedo */
-        font-size: 1.05rem; /* Letras mais equilibradas e profissionais */
+        width: 100%;
+        padding: 14px 20px; /* Dá bastante área de clique horizontal e vertical */
+        font-size: 1.1rem;
         font-weight: 700;
         letter-spacing: 0.5px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divisória sutil entre os links */
+        color: #ffffff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divisória sutil */
+        box-sizing: border-box;
     }
 
-    /* Remove a borda divisória do último link */
     #navbarsPrincipal ul li:last-child a {
         border-bottom: none;
     }
 
-    /* Classe ativada via JS para abrir a gaveta */
     #navbarsPrincipal.active {
-        left: 0;
+        left: 0; /* Desliza cobrindo toda a largura do display */
     }
 
-    /* Garante que o rodapé também se alinhe perfeitamente */
+    /* Efeito visual do Hambúrguer ativo */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
     .site-footer {
         flex-direction: column;
         text-align: center;
