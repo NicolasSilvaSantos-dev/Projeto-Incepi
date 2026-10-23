@@ -88,8 +88,12 @@
 .footer-box:nth-child(3) { text-align: right; }
 
 .footer-box a {
-    color: #ffffff;
+    color: #137bf1;
     text-decoration: underline;
+}
+.footer-box {
+    color: #ffffff;
+    margin: 0;
 }
 
 /* --- RESPONSIVIDADE MOBILE (Telas até 768px) --- */
