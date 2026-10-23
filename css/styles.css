@@ -54,8 +54,23 @@ a {
     text-decoration: none;
     color: inherit;
 }
+/* Coloque os estilos abaixo */
 
-/* ESTILOS DE IMAGEM DA SEÇÃO DESTAQUE */
+:root {
+    --cor-principal: #0279da;
+    --cor-secundaria: #444444;
+    --cor-fundo: #3493e1;
+    --cor-texto: #262626;
+    --cor-texto-menu: #026e0b;
+    --fonte-principal: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
 .destaque-imagem {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente na tela */
