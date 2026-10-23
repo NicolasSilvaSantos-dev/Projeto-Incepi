@@ -35,11 +35,15 @@ body {
     margin: 0;
 }
 
-/* GESTÃO DE CONTEÚDO PRINCIPAL (Empurra o footer para o rodapé se a tela for curta) */
+/* GESTÃO DE CONTEÚDO PRINCIPAL */
 #conteudo-principal {
     flex: 1 0 auto; 
     width: 100%;
+    max-width: 1200px; /* Impede que o texto estique infinitamente em monitores grandes */
+    margin: 0 auto;    /* Centraliza o bloco inteiro na tela do computador */
+    padding: 40px 20px; /* Cria o respiro lateral padrão (20px) e vertical (40px) */
 }
+
 
 img, picture, video, canvas, svg {
     display: block;
