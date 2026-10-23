@@ -34,7 +34,10 @@ Ao longo da criação do projeto, enfrentamos e superamos os seguintes desafios:
 
 **Estilização e Posicionamento (CSS)**: Durante a etapa de design e definição visual do site, posicionar os botões corretamente na interface se mostrou um desafio que nos ajudou a evoluir nossa compreensão sobre layouts. 
 
-**Cores e Tipografia**: Dia 16/10/26 - Nos baseamos nas cores que a empresa representa e fizemos pequenas alterações com base na nossa pesquisa de mercado na área relacionada, verificamos que a principal cor usada é o azul, o que vai exatamente de acordo com o modelo do nosso site, nosso primeiro teste foi com está tonalidade de azul #004B87 definida como cor principal e está #4faaff outra tonalidade de azul definida como cor de fundo, mas não ficou agradável. Definimos a fonte principal (Monteserrat) e a secundária (Sans-serif), mas tivemos muita dificuldade para implementar no nosso site, pois não estava importando, mas depois de muita tentativa e erro conseguimos.     
+**Cores e Tipografia**: Dia 16/10/26 - Nos baseamos nas cores que a empresa representa e fizemos pequenas alterações com base na nossa pesquisa de mercado na área relacionada, verificamos que a principal cor usada é o azul, o que vai exatamente de acordo com o modelo do nosso site, nosso primeiro teste foi com está tonalidade de azul #004B87 definida como cor principal e está #4faaff outra tonalidade de azul definida como cor de fundo, mas não ficou agradável. Definimos a fonte principal (Monteserrat) e a secundária (Sans-serif), mas tivemos muita dificuldade para implementar no nosso site, pois não estava importando, mas depois de muita tentativa e erro conseguimos. 
+Dia 23/10/26 - Hoje fizemos o teste de várias cores, nossa cor principal mudou para #003057 e para a cor de fundo testamos as seguintes cores: #abc5da, #a4c2da, #3493e1, #66829a e #ccd5dd, dentre elas foi a #ccd5dd que casou melhor com a com principal. Também mudamos a cor do texto do footer e a cor do link presente nele.  
+
+**Componentes**: Dia 16/10/26 - Hoje adicionamos o menu hambúrguer e melhoramos a responsividade do site.
 
 ## Conclusão
 
