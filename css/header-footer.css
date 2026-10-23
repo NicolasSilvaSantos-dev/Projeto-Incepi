@@ -81,55 +81,86 @@
 
 /* --- RESPONSIVIDADE MOBILE (Telas até 768px) --- */
 @media (max-width: 768px) {
+    /* Força o botão a aparecer no celular com espaçamento interno */
     .hamburger {
-        display: flex; /* Exibe o botão no celular */
+        display: flex;
+        padding: 8px;
     }
 
-    /* Transforma o menu em uma cortina vertical oculta à esquerda */
+    /* Ajuste do Header para manter tudo em uma linha sem quebras */
+    .site-header {
+        padding: 10px 15px;
+    }
+
+    .header-container {
+        flex-direction: row; /* Garante Logo na esquerda e Hamburguer na direita */
+        justify-content: space-between;
+        align-items: center;
+        gap: 0;
+    }
+
+    /* Reduz levemente o tamanho do texto do logo/marca se necessário */
+    .logo a {
+        font-size: 1.1rem;
+        white-space: nowrap; /* Impede o nome da empresa de quebrar linha */
+    }
+
+    /* CORREÇÃO DO FUNDO TRANSPARENTE E POSIÇÃO DA GAVETA */
     #navbarsPrincipal {
         position: absolute;
-        top: 100%; /* Fixa logo abaixo do cabeçalho */
+        top: 100%; /* Brota exatamente abaixo do limite inferior do cabeçalho */
         left: -100%;
         width: 100%;
-        height: calc(100vh - 100%);
-        background-color: var(--cor-principal);
-        transition: left 0.3s ease;
-        z-index: 1000;
+        height: auto; /* Deixa o tamanho se ajustar aos links para não cobrir a tela toda */
+        background-color: #0279da; /* Força a cor principal sólida (sem transparência) */
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15); /* Sombra suave abaixo do menu aberto */
+        transition: left 0.3s ease-in-out;
+        z-index: 9999; /* Garante que ficará por cima de qualquer elemento da página */
     }
 
+    /* Alinhamento interno dos links da lista */
     #navbarsPrincipal ul {
         flex-direction: column;
         align-items: center;
-        padding-top: 40px;
-        gap: 30px;
+        gap: 0; /* Remove o gap para controlar pelo padding do link */
+        padding: 15px 0;
     }
 
+    #navbarsPrincipal ul li {
+        width: 100%; /* Faz a área do clique ocupar a largura inteira */
+        text-align: center;
+    }
+
+    /* Ajuste no tamanho e espaçamento das letras */
     #navbarsPrincipal ul a {
-        font-size: 1.3rem;
+        display: block;
+        padding: 12px 0; /* Espaço confortável para o clique do dedo */
+        font-size: 1.05rem; /* Letras mais equilibradas e profissionais */
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divisória sutil entre os links */
     }
 
-    /* Classe ativada via JS para fazer o menu aparecer deslizando */
+    /* Remove a borda divisória do último link */
+    #navbarsPrincipal ul li:last-child a {
+        border-bottom: none;
+    }
+
+    /* Classe ativada via JS para abrir a gaveta */
     #navbarsPrincipal.active {
         left: 0;
     }
 
-    /* Transforma as barrinhas do hambúrguer em um "X" quando ativo */
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-    /* Ajuste para o Rodapé quebrar linha no mobile */
+    /* Garante que o rodapé também se alinhe perfeitamente */
     .site-footer {
         flex-direction: column;
         text-align: center;
+        padding: 20px;
     }
-    .footer-box:nth-child(1), .footer-box:nth-child(2), .footer-box:nth-child(3) {
+    .footer-box:nth-child(1), 
+    .footer-box:nth-child(2), 
+    .footer-box:nth-child(3) {
         text-align: center;
     }
 }
+
