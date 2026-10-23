@@ -39,3 +39,105 @@
     color: #ffffff;
     text-decoration: underline;
 }
+
+/* --- ESTILOS PADRÃO (DESKTOP) --- */
+.site-header {
+    background-color: var(--cor-principal);
+    padding: 15px 20px;
+  }
+  
+  .header-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between; /* Separa Logo do Menu */
+    align-items: center;
+  }
+  
+  .logo a {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  
+  #navbarsPrincipal ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  #navbarsPrincipal ul a {
+    color: #ffffff;
+    font-weight: 700;
+    transition: opacity 0.2s;
+  }
+  
+  #navbarsPrincipal ul a:hover {
+    opacity: 0.8;
+  }
+  
+  /* Oculta o botão hamburguer no desktop */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .hamburger .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  
+  /* --- RESPONSIVIDADE (MOBILE - Telas até 768px) --- */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex; /* Exibe o hambúrguer no mobile */
+    }
+  
+    /* Transforma o menu em uma gaveta vertical oculta por padrão */
+    #navbarsPrincipal {
+      position: absolute;
+      top: 60px; /* Ajuste conforme a altura do seu header */
+      left: -100%; /* Esconde o menu para o lado esquerdo */
+      width: 100%;
+      height: calc(100vh - 60px);
+      background-color: var(--cor-principal);
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+  
+    #navbarsPrincipal ul {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 40px;
+      gap: 30px;
+    }
+  
+    #navbarsPrincipal ul a {
+      font-size: 1.3rem;
+    }
+  
+    /* Classe que o JavaScript vai adicionar para abrir o menu */
+    #navbarsPrincipal.active {
+      left: 0;
+    }
+  
+    /* Animação opcional: Transforma o Hamburguer em um "X" quando ativo */
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+  }
+  
