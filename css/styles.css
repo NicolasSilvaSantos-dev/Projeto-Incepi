@@ -66,3 +66,18 @@ body {
     height: auto;
 }
 
+/* Adicione no fim do seu arquivo styles.css */
+@media (max-width: 768px) {
+    .destaque-container, .sobre-container {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    /* Se sua estrutura original usava flex horizontal no destaque, mude para vertical */
+    .destaque-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
