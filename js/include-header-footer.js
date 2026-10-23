@@ -1,7 +1,8 @@
 // 1. Descobre a raiz correta do site ANTES de tudo (Escopo Global)
 const repoName = window.location.pathname.split('/')[1];
 const isGitHubPages = window.location.hostname.includes('github.io');
-const basePath = isGitHubPages ? `/${repoName}` : '';
+// Garante a barra inicial para caminhos absolutos corretos
+const basePath = isGitHubPages ? `/${repoName}` : ''; 
 
 document.addEventListener('DOMContentLoaded', () => {
     // 2. Busca simultaneamente usando o basePath correto
@@ -20,27 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.insertAdjacentHTML('afterbegin', headerHtml);
         document.body.insertAdjacentHTML('beforeend', footerHtml);
 
-        const logo = document.getElementById('logo');
-        if (logo) {
-            // Se o basePath for /meu-repositorio, vira /meu-repositorio/assets/imagens/Logo.png
-            logo.src = `${basePath}/assets/imagens/Logo.png`; 
+        // CORREÇÃO DO REDIRECIONAMENTO E IMAGEM DA LOGO
+        // 1. Busca a imagem do logo (se houver id="logo")
+        const logoImg = document.getElementById('logo');
+        if (logoImg) {
+            logoImg.src = `${basePath}/assets/imagens/Logo.png`; 
+        }
+
+        // 2. CORREÇÃO CRÍTICA: Busca o link/âncora que envolve o logo e corrige o redirecionamento
+        const logoLink = document.querySelector('.logo a');
+        if (logoLink) {
+            // Força o link do logo a apontar SEMPRE para a raiz (ex: / ou /nome-do-repositorio/)
+            logoLink.href = isGitHubPages ? `${basePath}/index.html` : `/index.html`;
         }
         
+        // 3. Corrige os demais links internos do menu
         const linksDinamicos = document.querySelectorAll('.caminho-relativo');
         linksDinamicos.forEach(link => {
             const hrefOriginal = link.getAttribute('href');
-            // Junta a raiz correta do repositório com o destino final
             link.href = `${basePath}/${hrefOriginal}`;
         });
 
-        // Configurações do menu ativadas IMEDIATAMENTE após a injeção do HTML
+        // Configurações do menu ativadas após a injeção do HTML
         destacarMenuAtivo();
         configurarMenuHamburguer();
     })
     .catch(error => console.error('Erro ao carregar header/footer:', error));
 });
 
-// NOVA FUNÇÃO: Colocada fora para manter a organização do código
 function configurarMenuHamburguer() {
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector("#navbarsPrincipal");
