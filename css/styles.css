@@ -467,3 +467,123 @@ body {
         text-align: center;
     }
 }
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.produto-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Força a tag <a> interna do produto a se comportar como o bloco flexível principal */
+.link-produto {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.produto-imagem-wrapper {
+    width: 100%;
+    height: 220px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+
+.img-produto {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.produto-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.nome-produto {
+    font-size: 1.15rem;
+    color: #003057; /* Usando a cor principal extraída do seu CSS */
+    margin: 0 0 5px 0;
+    font-weight: bold;
+}
+
+.produto-detalhe {
+    font-size: 0.85rem;
+    color: #666;
+    margin: 0 0 20px 0;
+}
+
+.btn-produto {
+    display: block;
+    border: 2px solid #003057;
+    color: #003057;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: auto; /* Alinha os botões perfeitamente na base de todos os cards */
+    transition: all 0.2s ease;
+}
+
+.link-produto:hover .btn-produto {
+    background-color: #003057;
+    color: #ffffff;
+}
+
+/* titulo da pagina de produtos */
+   .produtos-secao h1 {
+    text-align: center;
+    font-size: 2.4rem;       /* Um pouco maior e mais imponente */
+    font-weight: 700;        /* Peso forte para passar autoridade */
+    color: #003057;          /* O azul escuro industrial da marca */
+    letter-spacing: -0.5px;  /* Deixa as letras ligeiramente mais juntas e elegantes */
+    padding: 0 20px;
+    position: relative;
+    display: table;          /* Truque para a linha de baixo acompanhar o tamanho do texto */
+    margin: 40px auto 25px auto; /* Centraliza o bloco e dá espaço acima e abaixo */
+}
+
+/* LINHA DE DESTAQUE REFINADA ABAIXO DO TÍTULO */
+.produtos-secao h1::after {
+    content: "";
+    display: block;
+    width: 60px;             /* Largura da linha central */
+    height: 4px;             /* Espessura da linha */
+    background-color: #0279da; /* O azul claro de destaque da sua marca */
+    border-radius: 2px;
+    margin: 12px auto 0 auto; /* Centraliza a linha e afasta do texto */
+}
+
+.produtos-subtitulo {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #556270;          /* Um cinza levemente azulado, muito mais moderno */
+    font-weight: 500;        /* Nem tão fino, nem tão grosso */
+    padding: 0 20px;
+    max-width: 650px;        /* Reduzido para o texto quebrar em duas linhas simétricas */
+    margin: 0 auto 55px auto; /* Centraliza e dá um respiro perfeito até os cards */
+}
+
