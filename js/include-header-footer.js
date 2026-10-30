@@ -45,6 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Configurações do menu ativadas após a injeção do HTML
         destacarMenuAtivo();
         configurarMenuHamburguer();
+        const elementoAnos = document.getElementById('anos-empresa');
+        if (elementoAnos) {
+            const anoFundacao = 1989;
+            const anoAtual = new Date().getFullYear(); // Pega o ano atual do sistema do usuário
+            const idadeEmpresa = anoAtual - anoFundacao;
+            
+            // Injeta o número calculado diretamente no HTML
+            elementoAnos.textContent = idadeEmpresa;
+        }
     })
     .catch(error => console.error('Erro ao carregar header/footer:', error));
 });

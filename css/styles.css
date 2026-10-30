@@ -104,3 +104,366 @@ body {
       gap: 20px;
     }
 }
+
+/* 1. Força a faixa a escapar de qualquer recuo (padding) do elemento pai */
+.faixa-info {
+    background-color: #ffffff !important; /* Garante o fundo branco */
+    border-top: 1px solid #e0e0e0; 
+    border-bottom: 1px solid #e0e0e0;
+    padding: 30px 0;
+    
+    /* TRUQUE DO FLEX/GRID: Faz o elemento ocupar 100% da tela mesmo dentro de um bloco com recuo */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+/* 2. Mantém o conteúdo alinhado e centralizado com o resto do site */
+.faixa-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* 3. Organiza os 4 itens rigidamente na mesma linha */
+.faixa-lista {
+    display: flex;
+    justify-content: space-between; /* Distribui igualmente de ponta a ponta */
+    align-items: flex-start;        /* Alinha os textos pelo topo */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;                      /* Diminuído o espaço entre eles para ajudar a caber */
+}
+
+/* 4. Define uma largura máxima para cada item para que os 4 caibam lado a lado */
+.faixa-item {
+    flex: 1;                        /* Faz todos os 4 itens terem exatamente o mesmo tamanho */
+    min-width: 200px;               /* Largura mínima segura */
+}
+
+/* Ajustes finos nos textos para não quebrarem linha à toa */
+.faixa-item h3 {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    white-space: nowrap;            /* Impede que o título quebre em duas linhas se apertado */
+}
+
+.faixa-item p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: #666;
+}
+
+/* ==========================================================================
+   1. BOTÃO DE DESTAQUE PRINCIPAL: SOLICITAR ORÇAMENTO (HERO)
+   ========================================================================== */
+   .btn-orcamento {
+    display: inline-block;
+    background-color: #0056b3; /* Cor principal marcante (Ajuste com o azul da Incepi) */
+    color: #ffffff;            /* Cor do texto interna */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;     /* Remove o sublinhado padrão de link */
+    padding: 14px 32px;        /* Dá corpo ao botão (cima/baixo e lados) */
+    border-radius: 6px;        /* Arredonda os cantos */
+    margin-top: 20px;          /* Afasta o botão do parágrafo de cima */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar relevo */
+    transition: all 0.3s ease; /* Animação suave para os efeitos abaixo */
+    text-align: center;
+}
+
+/* Efeito de Destaque ao passar o mouse */
+.btn-orcamento:hover {
+    background-color: #003d82; /* Escurece o fundo levemente */
+    transform: translateY(-3px); /* Levanta o botão suavemente */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Aumenta a sombra */
+}
+
+/* Efeito de clique */
+.btn-orcamento:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==========================================================================
+   2. BOTÃO DE HISTÓRIA: SAIBA MAIS SOBRE A NOSSA HISTÓRIA (SOBRE)
+   ========================================================================== */
+/* Para criar um contraste elegante na página, este botão usará o estilo "Outline" 
+   (fundo transparente com borda), que indica uma ação secundária importante */
+.link-saiba-mais {
+    display: inline-block;
+    background-color: transparent; /* Fundo transparente */
+    color: #0056b3;                /* Cor do texto e da borda */
+    border: 2px solid #0056b3;     /* Linha ao redor do botão */
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    margin-top: 25px;              /* Afasta o botão dos parágrafos do texto */
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Efeito de Destaque Invertido ao passar o mouse */
+.link-saiba-mais:hover {
+    background-color: #0056b3;     /* O fundo preenche com a cor da marca */
+    color: #ffffff;                /* O texto muda para branco para dar leitura */
+    transform: translateY(-2px);   /* Leve levantamento */
+}
+
+.link-saiba-mais:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   HERO MODERNO COM IMAGEM DE FUNDO (DESKTOP PADRÃO)
+   ========================================================================== */
+   .destaque {
+    position: relative;
+    width: 100%;                /* Usa a largura total disponível de forma limpa */
+    min-height: 60vh;           
+    display: flex;
+    align-items: center;        
+    justify-content: center;    
+    background-image: url('../assets/imagens/bombonas-principal.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;     
+    background-position: center;
+    margin-bottom: 50px;
+    padding: 60px 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 48, 87, 0.7); /* Azul escuro com boa opacidade para leitura */
+    z-index: 1;
+}
+
+.destaque-container {
+    position: relative;
+    z-index: 2;                 
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.destaque-texto {
+    max-width: 700px;           
+    text-align: left;           
+}
+
+.destaque-texto h1 {
+    color: #ffffff !important;  
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.25;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.destaque-texto p {
+    color: #f0f4f8 !important;  
+    font-size: 1.15rem;
+    margin-bottom: 35px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.destaque-texto .btn-orcamento {
+    margin-top: 0; 
+}
+
+/* ==========================================================================
+   FAIXA DE DIFERENCIAIS (ESTRUTURA INTEGRAL E RESPONSIVA)
+   ========================================================================== */
+
+   .faixa-info {
+    background-color: #ffffff !important; 
+    border-top: 1px solid #e0e0e0; 
+    border-bottom: 1px solid #e0e0e0;
+    padding: 40px 0;
+    margin: 50px 0; /* Cria um espaçamento saudável acima e abaixo da faixa */
+    
+    /* A FÓRMULA MÁGICA: Faz a faixa branca ignorar o container e ir de ponta a ponta na tela */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.faixa-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Margem de segurança lateral interna */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.faixa-lista {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;        
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px; /* Aumentado o espaço para os blocos respirarem */
+}
+
+.faixa-item {
+    flex: 1; /* Divide o espaço da tela perfeitamente por 4 */
+    min-width: 180px; 
+}
+
+/* CORREÇÃO CRÍTICA DO ATROPELO DE TEXTO */
+.faixa-item h3 {
+    font-size: 1.05rem;
+    margin: 0 0 8px 0;
+    color: var(--cor-principal);
+    line-height: 1.3;
+    /* REMOVIDO: white-space: nowrap (Ele que causava o atropelo) */
+    white-space: normal; /* Permite que o título quebre linha de forma elegante em telas médias */
+}
+
+.faixa-item p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   REGRA ABSOLUTA PARA MOBILE E TELAS MÉDIAS (TABLETS / MONITORES PEQUENOS)
+   ========================================================================== */
+@media (max-width: 992px) {
+    /* Quando a tela for menor que 992px, os 4 itens já começam a se apertar,
+       então empilhamos em modo coluna para manter o design perfeito */
+    .faixa-lista {
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        gap: 35px;              
+    }
+
+    .faixa-item {
+        width: 100%;
+        max-width: 300px; /* Limita a largura no celular para o texto não esticar demais */
+    }
+}
+
+/* ==========================================================================
+   SEÇÃO TÉCNICA E VITRINE DE MATÉRIAS-PRIMAS (COMPORTAMENTO DESKTOP)
+   ========================================================================== */
+   .secao-tecnica {
+    padding: 60px 0;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.tecnica-container {
+    display: flex;
+    gap: 40px; /* Cria um espaçamento generoso entre as duas colunas */
+    justify-content: space-between;
+}
+
+.card-tecnico {
+    flex: 1; /* Faz as duas colunas dividirem o espaço em partes iguais (50% cada) */
+    background-color: #ffffff; /* Fundo branco para destacar os blocos técnicos */
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-conteudo h2 {
+    font-size: 1.6rem;
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+}
+
+.card-conteudo p {
+    font-size: 0.95rem;
+    color: #444444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.lista-tecnica {
+    margin-bottom: 30px;
+    padding-left: 0;
+}
+
+.lista-tecnica li {
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Cria uma bolinha azul estilizada na lista de itens */
+.lista-tecnica li::before {
+    content: "•";
+    color: var(--cor-principal);
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* BOTÃO ESTILIZADO PARA AS PÁGINAS INTERNAS */
+.btn-secundario {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--cor-principal);
+    border: 2px solid var(--cor-principal);
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-align: center;
+    align-self: flex-start; /* Mantém o botão alinhado à esquerda */
+    margin-top: auto;       /* Força o botão a ficar fixado na base do card */
+}
+
+.btn-secundario:hover {
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE DA SEÇÃO TÉCNICA (MOBILE - ATÉ 992PX)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .tecnica-container {
+        flex-direction: column; /* Transforma as colunas horizontais em verticais */
+        gap: 30px;
+    }
+
+    .card-tecnico {
+        width: 100%;
+        padding: 25px;
+    }
+    
+    .btn-secundario {
+        width: 100%; /* No celular, o botão se estende para facilitar o clique */
+        text-align: center;
+    }
+}
