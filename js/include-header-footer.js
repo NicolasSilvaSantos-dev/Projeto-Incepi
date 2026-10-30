@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 2. CORREÇÃO CRÍTICA: Busca o link/âncora que envolve o logo e corrige o redirecionamento
-        const logoLink = document.querySelector('.logo a');
+        const logoLink = document.querySelector('.logo-link');
         if (logoLink) {
             // Força o link do logo a apontar SEMPRE para a raiz (ex: / ou /nome-do-repositorio/)
             logoLink.href = isGitHubPages ? `${basePath}/index.html` : `/index.html`;
