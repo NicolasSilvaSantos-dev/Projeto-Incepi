@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import url("header-footer.css");
 
+/* Remove o cursor de seleção de texto (I) em toda a página e mantém a seta padrão */
+body, p, span, h1, h2, h3, h4, h5, h6, li, td, th {
+    cursor: default;
+}
 /* CSS de limpeza formatação padrão do CSS */
 *, *::before, *::after {
     margin: 0;
@@ -1980,4 +1984,437 @@ body {
     .capacidades-grid {
         grid-template-columns: 1fr 1fr;
     }
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO ISOLADA DAS PÁGINAS INDIVIDUAIS DE PRODUTOS
+   ========================================================================== */
+
+.produto-detalhe {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.produto-detalhe h1,
+.produto-detalhe .page-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    margin-bottom: 30px;
+    text-align: left;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 15px;
+}
+
+.produto-principal {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+.produto-midia {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.produto-foto,
+.produto-midia figure {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.produto-foto img,
+.produto-midia img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 380px;
+    border-radius: 6px;
+}
+
+.produto-detalhe h2,
+.produto-detalhe .section-subtitle {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+/* CARACTERÍSTICAS: Blocos limpos sem bordinha azul */
+.produto-especificacoes table,
+.produto-especificacoes .especificacoes-tabela,
+.produto-especificacoes .tabela-especificacoes {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    font-size: 0.95rem;
+}
+
+.produto-especificacoes tr {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produto-especificacoes tr:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-color: #cbd5e1;
+}
+
+.produto-especificacoes th,
+.produto-especificacoes td {
+    padding: 12px 16px;
+    text-align: left;
+    border: none;
+}
+
+.produto-especificacoes th {
+    font-weight: 700;
+    color: var(--cor-principal);
+    width: 38%;
+}
+
+.produto-especificacoes td {
+    color: #334155;
+    font-weight: 500;
+}
+
+.divider,
+.produto-detalhe hr {
+    border: none;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 35px 0;
+}
+
+.produto-fechamento {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fechamento-info,
+.produto-fechamento > div:not(.fotos-fechamento) {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.produto-fechamento p {
+    margin: 0 0 10px 0;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.produto-fechamento ul,
+.fechamento-lista,
+.lista-fechamento {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.produto-fechamento li {
+    font-size: 0.9rem;
+    color: #475569;
+    position: relative;
+    padding-left: 20px;
+}
+
+.produto-fechamento li::before {
+    content: "•";
+    color: #0279da;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.fotos-fechamento {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.fotos-fechamento img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+/* ==========================================================================
+   MANUSEIO EM CARTÕES (COM HOVER DESTAQUE E COR INSTITUCIONAL)
+   ========================================================================== */
+.manuseio-lista,
+.lista-manuseio,
+.produto-manuseio ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.manuseio-lista li,
+.lista-manuseio li,
+.produto-manuseio li {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #0279da;
+    border-radius: 8px;
+    padding: 18px 20px;
+    font-size: 0.92rem;
+    color: #1e293b;
+    font-weight: 600;
+    line-height: 1.5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+}
+
+/* Novo hover: Fundo com tom azul bem suave e borda destacada em vez de cinza escuro */
+.manuseio-lista li:hover,
+.lista-manuseio li:hover,
+.produto-manuseio li:hover {
+    background-color: #f0f7ff; /* Azul claro corporativo muito suave */
+    border-color: #0279da;     /* Realça a borda inteira com o azul do site */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(2, 121, 218, 0.12); /* Sombra levemente azulada */
+}
+
+/* FORMULÁRIO DE ORÇAMENTO */
+.produto-orcamento {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 35px;
+    margin-top: 20px;
+}
+
+.produto-orcamento h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--cor-principal);
+}
+
+.produto-orcamento .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.produto-orcamento .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.produto-orcamento label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    margin-bottom: 8px;
+}
+
+.produto-orcamento .form-control,
+.produto-orcamento input[type="text"],
+.produto-orcamento input[type="email"],
+.produto-orcamento input[type="tel"],
+.produto-orcamento input[type="number"],
+.produto-orcamento select,
+.produto-orcamento textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    color: #1e293b;
+    background-color: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produto-orcamento input:focus,
+.produto-orcamento select:focus,
+.produto-orcamento textarea:focus {
+    outline: none;
+    border-color: #0279da;
+    box-shadow: 0 0 0 4px rgba(2, 121, 218, 0.2);
+}
+
+.produto-orcamento textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.produto-orcamento button[type="submit"],
+.produto-orcamento .btn-submit {
+    display: block;
+    width: 100%;
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.produto-orcamento button[type="submit"]:hover,
+.produto-orcamento .btn-submit:hover {
+    background-color: #001f3b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+    .produto-detalhe {
+        padding: 20px;
+    }
+
+    .produto-principal {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .produto-especificacoes table,
+    .produto-especificacoes .especificacoes-tabela,
+    .produto-especificacoes .tabela-especificacoes {
+        border-spacing: 0 6px;
+    }
+    
+    .produto-especificacoes th,
+    .produto-especificacoes td {
+        padding: 10px 12px;
+        display: block;
+        width: 100%;
+        border: none;
+    }
+
+    .produto-especificacoes tr {
+        display: block;
+        padding: 8px 12px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+    .produto-especificacoes th {
+        padding-bottom: 2px;
+        color: #0279da;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .produto-especificacoes td {
+        padding-top: 0;
+        font-size: 0.95rem;
+    }
+
+    .manuseio-lista,
+    .lista-manuseio,
+    .produto-manuseio ul {
+        grid-template-columns: 1fr;
+    }
+
+    .produto-orcamento .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .produto-orcamento {
+        padding: 20px;
+    }
+}
+
+/* ==========================================================================
+   CORREÇÃO: BLOCO DISCRETO APENAS PARA O TEXTO DO CARD DE PRODUTOS
+   ========================================================================== */
+.produtos-secao .produto-card .produto-detalhe {
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    margin: 8px 0 !important;
+    box-shadow: none !important;
+    font-size: 0.85rem !important;
+    color: #64748b !important;
+    display: inline-block !important;
+}
+
+.produtos-secao .produto-card p {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+/* ==========================================================================
+   ESTILIZAÇÃO DA COLUNA ESQUERDA (APENAS NAS PÁGINAS INDIVIDUAIS)
+   ========================================================================== */
+.produto-principal .produto-info {
+    font-size: 0.95rem;
+    color: #334155;
+    background-color: #f8fafc;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-principal); /* Borda lateral azul solicitada */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    margin: 0 0 12px 0;
+}
+
+.produto-principal .produto-info strong {
+    color: var(--cor-principal);
+}
+/* ==========================================================================
+   ESTILIZAÇÃO DOS TEXTOS DA ESQUERDA (APLICA EM QUALQUER <P> NAS PÁGINAS INDIVIDUAIS)
+   ========================================================================== */
+.produto-principal .produto-midia p {
+    font-size: 0.95rem;
+    color: #334155;
+    background-color: #f8fafc;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-principal);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    margin: 0 0 12px 0;
+}
+
+.produto-principal .produto-midia p strong {
+    color: var(--cor-principal);
 }
