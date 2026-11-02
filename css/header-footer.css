@@ -1,12 +1,15 @@
 @charset "UTF-8";
 
-/* --- ESTILOS PADRÃO (DESKTOP) --- */
+/* ==========================================================================
+   ESTILIZAÇÃO MODERNA DO HEADER E NAVBAR
+   ========================================================================== */
 .site-header {
     background-color: var(--cor-principal);
-    padding: 10px 20px; /* Reduzido levemente o espaço interno vertical */
+    padding: 12px 20px;
     position: relative;
     width: 100%;
     z-index: 1001;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -16,13 +19,12 @@
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    gap: 15px; /* Espaço de segurança entre o bloco do logo e o início do menu */
+    gap: 20px;
 }
 
-/* Reduz o tamanho do bloco do logo para dar espaço ao texto */
 .logo {
-    max-width: 180px; /* Impede que o logo ocupe muito espaço na tela */
-    flex-shrink: 0;   /* Garante que o logo não vai esmagar */
+    max-width: 180px;
+    flex-shrink: 0;
 }
 
 .logo img {
@@ -31,29 +33,51 @@
     display: block;
 }
 
-/* Dá flexibilidade ao menu de navegar */
 #navbarsPrincipal {
     flex-grow: 1;
     display: flex;
-    justify-content: flex-end; /* Empurra os links para o canto direito */
+    justify-content: flex-end;
 }
 
 #navbarsPrincipal ul {
     display: flex;
-    gap: 15px; /* Ajuste sutil no espaço entre as palavras */
-    flex-wrap: nowrap; /* IMPEDE TOTALMENTE A QUEBRA DE LINHA NO DESKTOP */
+    gap: 8px; /* Espaçamento ideal entre os botões do menu */
+    flex-wrap: nowrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+/* Estilização moderna dos itens do menu como Botões Elegantes */
 #navbarsPrincipal ul a {
     color: #ffffff;
-    font-weight: 700;
-    font-size: 0.95rem; /* Ajuste milimétrico para caber todos os itens lado a lado */
-    white-space: nowrap; /* Garante que termos como "Tipos de Plástico" fiquem na mesma linha */
-    transition: opacity 0.2s;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+    background-color: transparent;
 }
 
+/* Efeito Hover nos Botões do Menu */
+#navbarsPrincipal ul a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
 
-/* Oculta o botão hambúrguer em telas de computador */
+/* DESTAQUE PARA A PÁGINA ATIVA (Atual) */
+#navbarsPrincipal ul a.active {
+    background-color: #0279da; /* Azul de destaque da marca */
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Botão Hambúrguer (Mobile) */
 .hamburger {
     display: none;
     cursor: pointer;
@@ -73,30 +97,51 @@
     transition: all 0.3s ease;
 }
 
-/* --- LAYOUT DO RODAPÉ (FOOTER) --- */
+/* ==========================================================================
+   ESTILIZAÇÃO MODERNA DO RODAPÉ (FOOTER)
+   ========================================================================== */
 .site-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--cor-principal);
-    padding: 30px 40px;
+    background-color: #00223e; /* Tom levemente mais escuro para profundidade */
+    border-top: 3px solid #0279da;
+    padding: 35px 40px;
     gap: 20px;
+    color: #ffffff;
 }
 
 .footer-box:nth-child(1) { text-align: left; }
 .footer-box:nth-child(2) { text-align: center; }
 .footer-box:nth-child(3) { text-align: right; }
 
-.footer-box a {
-    color: #137bf1;
-    text-decoration: underline;
-}
-.footer-box {
-    color: #ffffff;
-    margin: 0;
+.footer-box p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin-bottom: 4px;
 }
 
-/* --- RESPONSIVIDADE MOBILE (Telas até 768px) --- */
+.footer-box address {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+.footer-box a {
+    color: #60a5fa;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-box a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE MOBILE (Telas até 768px)
+   ========================================================================== */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -104,7 +149,7 @@
     }
 
     .site-header {
-        padding: 10px 15px;
+        padding: 12px 15px;
     }
 
     .header-container {
@@ -114,60 +159,56 @@
         gap: 0;
     }
 
-    .logo a {
-        font-size: 1.1rem;
-        white-space: nowrap;
-    }
-
-    /* GAVETA DO MENU TOTALMENTE ALINHADA */
+    /* Gaveta do Menu Mobile */
     #navbarsPrincipal {
         position: absolute;
         top: 100%;
-        left: -100%; /* Escondido à esquerda por padrão */
+        left: -100%;
         width: 100%;
         height: auto;
         background-color: var(--cor-principal);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         transition: left 0.3s ease-in-out;
         z-index: 9999;
     }
 
-    /* Força os links a preencherem a largura total do menu de forma simétrica */
     #navbarsPrincipal ul {
         display: flex;
         flex-direction: column;
-        align-items: stretch; /* Estica as linhas para cobrirem de ponta a ponta */
+        align-items: stretch;
         width: 100%;
-        padding: 10px 0;
-        gap: 0;
+        padding: 15px 0;
+        gap: 6px;
     }
 
     #navbarsPrincipal ul li {
         width: 100%;
-        text-align: center; /* Centraliza o texto exatamente no meio da tela */
+        text-align: center;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
 
     #navbarsPrincipal ul a {
         display: block;
         width: 100%;
-        padding: 14px 20px; /* Dá bastante área de clique horizontal e vertical */
-        font-size: 1.1rem;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        color: #ffffff;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divisória sutil */
-        box-sizing: border-box;
+        padding: 12px 16px;
+        font-size: 1rem;
+        border-radius: 8px;
+        border-bottom: none;
+        background-color: rgba(255, 255, 255, 0.03);
     }
 
-    #navbarsPrincipal ul li:last-child a {
-        border-bottom: none;
+    /* Destaque da página ativa no menu mobile */
+    #navbarsPrincipal ul a.active {
+        background-color: #0279da !important;
+        font-weight: 700;
     }
 
     #navbarsPrincipal.active {
-        left: 0; /* Desliza cobrindo toda a largura do display */
+        left: 0;
     }
 
-    /* Efeito visual do Hambúrguer ativo */
+    /* Animação do ícone Hambúrguer */
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
@@ -178,11 +219,14 @@
         transform: translateY(-9px) rotate(-45deg);
     }
 
+    /* Ajustes do Footer no Mobile */
     .site-footer {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
+        padding: 25px 20px;
+        gap: 20px;
     }
+
     .footer-box:nth-child(1), 
     .footer-box:nth-child(2), 
     .footer-box:nth-child(3) {
@@ -190,3 +234,74 @@
     }
 }
 
+/* Ajuste fino exclusivo para laptops (entre 769px e 1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .header-container {
+        padding: 0 10px;
+        gap: 5px;
+    }
+
+    #navbarsPrincipal ul {
+        gap: 4px; /* Diminui a distância entre os botões no laptop */
+    }
+
+    #navbarsPrincipal ul a {
+        font-size: 0.8rem;  /* Reduz ligeiramente a fonte */
+        padding: 6px 8px;   /* Reduz o espaçamento interno do botão */
+    }
+}
+
+/* ==========================================================================
+   BOTÃO FLUTUANTE DO WHATSAPP
+   ========================================================================== */
+.whatsapp-flutuante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 99999;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    animation: pulseWhatsApp 2s infinite;
+}
+
+.whatsapp-flutuante:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Animação suave para atrair a atenção do usuário */
+@keyframes pulseWhatsApp {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Ajuste fino do botão para telas mobile */
+@media (max-width: 768px) {
+    .whatsapp-flutuante {
+        bottom: 20px;
+        right: 20px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .whatsapp-flutuante svg {
+        width: 28px;
+        height: 28px;
+    }
+}

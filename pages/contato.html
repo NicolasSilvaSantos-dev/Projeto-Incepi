@@ -6,89 +6,106 @@
         <title>Contato | Incepi do Brasil - Indústria e Comércio de Embalagens Plásticas Industriais Ltda</title>
         <link rel="icon" href="../assets/imagens/icon-site.png" type="image/png">
         <link rel="stylesheet" href="../css/styles.css">
-        <script src="../js/include-header-footer.js" ></script>
+        <script src="../js/include-header-footer.js"></script>
     </head>
     <body>
-
-        
 
         <main id="conteudo-principal">
             <section aria-labelledby="titulo-contato" class="secao-contato">
                 <h1 id="titulo-contato">Contato</h1>
-                
-                <h2>INCEPI DO BRASIL INDÚSTRIA E COMÉRCIO DE EMBALAGENS PLÁSTICAS INDUSTRIAIS LTDA.</h2>
+                <h2 class="subtitulo-empresa">INCEPI DO BRASIL INDÚSTRIA E COMÉRCIO DE EMBALAGENS PLÁSTICAS INDUSTRIAIS LTDA.</h2>
 
-                <address>
-                    Rua Aparecida de São Manuel nº376/384 Cep: 03480-010<br>
-                    Vila Nova York - São Paulo-SP Brasil<br>
-                    <strong>Tel:</strong> <a href="tel:551127215156">(11) 2721-5156</a><br>
-                    <strong>E-mail:</strong> <a href="mailto:vendas@incepi.com.br">vendas@incepi.com.br</a>
-                </address>
+                <div class="grid-contato">
+                    
+                    <!-- COLUNA DA ESQUERDA: Horários + Formulário -->
+                    <div class="coluna-esquerda">
+                        
+                        <!-- Horários de Atendimento -->
+                        <section aria-labelledby="titulo-horario" class="card-horarios">
+                            <h2 id="titulo-horario">Horário de Atendimento</h2>
+                      
+                            <div class="item-horario">
+                                <h3>Atendimento Online / Vendas</h3>
+                                <p>Segunda a sexta, das 09:00 às 18:00</p>
+                            </div>
+                      
+                            <div class="item-horario">
+                                <h3>Entrega e Retirada de Mercadorias</h3>
+                                <p>Segunda a sexta, das 09:00 às 17:00</p>
+                            </div>
+                        </section>
 
-                <section aria-labelledby="titulo-horario">
-                    <h2 id="titulo-horario">Horário de atendimento</h2>
-              
-                    <div>
-                        <h3>Atendimento online</h3>
-                        <p>Segunda a sexta, das 09:00 às 18:00</p>
+                        <!-- Formulário Fale Conosco -->
+                        <section aria-labelledby="titulo-formulario" class="secao-formulario">
+                            <h2 id="titulo-formulario">Fale Conosco</h2>
+                            <form action="#" method="post" class="form-contato">
+                                <div>
+                                    <label for="nome">Nome Completo:*</label>
+                                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                                </div>
+
+                                <div>
+                                    <label for="email">E-mail:*</label>
+                                    <input type="email" id="email" name="email" placeholder="seuemail@dominio.com" required>
+                                </div>
+
+                                <div>
+                                    <label for="telefone">Telefone / WhatsApp:*</label>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                                </div>
+
+                                <div>
+                                    <label for="assunto">Assunto:*</label>
+                                    <select id="assunto" name="assunto" required>
+                                        <option value="" disabled selected>Selecione uma opção...</option>
+                                        <option value="duvidas">Dúvidas Gerais</option>
+                                        <option value="orcamento">Orçamento / Vendas</option>
+                                        <option value="suporte">Suporte ao Cliente</option>
+                                        <option value="outro">Outro Assunto</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="mensagem">Mensagem:*</label>
+                                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+                                </div>
+
+                                <button type="submit">Enviar Mensagem</button>
+                            </form>
+                        </section>
+
                     </div>
-              
-                    <div>
-                        <h3>Entrega e retirada</h3>
-                        <p>Segunda a sexta, das 09:00 às 17:00</p>
+
+                    <!-- COLUNA DA DIREITA: Endereço + Mapa -->
+                    <div class="coluna-direita">
+                        
+                        <!-- Endereço e Contatos Directos -->
+                        <address class="card-endereco">
+                            <h2>Endereço e Localização</h2>
+                            <p class="texto-endereco">
+                                Rua Aparecida de São Manuel, nº 376/384<br>
+                                Vila Nova York - CEP 03480-010<br>
+                                São Paulo - SP, Brasil
+                            </p>
+                            <div class="contatos-diretos">
+                                <p><strong>Telefone:</strong> <a href="tel:551127215156">(11) 2721-5156</a></p>
+                                <p><strong>E-mail:</strong> <a href="mailto:vendas@incepi.com.br">vendas@incepi.com.br</a></p>
+                            </div>
+                        </address>
+
+                        <!-- Mapa do Google Maps -->
+                        <div class="mapa-container">
+                            <iframe 
+                                src="https://maps.google.com/maps?ll=-23.578481,-46.507163&amp;z=16&amp;t=m&amp;hl=pt-PT&amp;gl=BR&amp;mapclient=embed&amp;cid=2041758742412119645&amp;output=embed" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Localização da Incepi do Brasil no Google Maps">
+                            </iframe>
+                        </div>
+
                     </div>
-                </section>
 
-                <!-- Formulário de Contato -->
-                <section aria-labelledby="titulo-formulario" class="secao-formulario">
-                    <h2 id="titulo-formulario">Fale Conosco</h2>
-                    <form action="#" method="post" class="form-contato">
-                        <div>
-                            <label for="nome">Nome Completo:</label>
-                            <input type="text" id="nome" name="nome" required>
-                        </div>
-
-                        <div>
-                            <label for="email">E-mail:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div>
-                            <label for="telefone">Telefone / WhatsApp:</label>
-                            <input type="tel" id="telefone" name="telefone">
-                        </div>
-
-                        <div>
-                            <label for="assunto">Assunto:</label>
-                            <select id="assunto" name="assunto" required>
-                                <option value="">Selecione uma opção</option>
-                                <option value="duvidas">Dúvidas Gerais</option>
-                                <option value="orcamento">Orçamento / Vendas</option>
-                                <option value="suporte">Suporte ao Cliente</option>
-                                <option value="outro">Outro</option>
-                            </select>
-                        </div>
-
-                        <div>
-                            <label for="mensagem">Mensagem:</label>
-                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-                        </div>
-
-                        <button type="submit">Enviar Mensagem</button>
-                    </form>
-                </section>
-
-                <!-- Integração com Google Maps -->
-                <div class="mapa-container">
-                    <iframe 
-                        src="https://maps.google.com/maps?ll=-23.578481,-46.507163&amp;z=16&amp;t=m&amp;hl=pt-PT&amp;gl=BR&amp;mapclient=embed&amp;cid=2041758742412119645&amp;output=embed" 
-                        width="600"
-                        height="450" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Localização da Incepi do Brasil no Google Maps">
-                    </iframe>
                 </div>
             </section>
         </main>

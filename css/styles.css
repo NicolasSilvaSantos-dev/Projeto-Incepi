@@ -587,3 +587,1397 @@ body {
     margin: 0 auto 55px auto; /* Centraliza e dá um respiro perfeito até os cards */
 }
 
+/* ==========================================================================
+   ESTILIZAÇÃO DA PÁGINA DE ORÇAMENTO (FORMULÁRIO MODERNO E ACESSÍVEL)
+   ========================================================================== */
+
+/* Estilização do cabeçalho da página */
+.secao-orcamento h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    letter-spacing: -0.5px;
+    margin: 10px auto 20px auto;
+}
+
+.secao-orcamento h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #0279da;
+    border-radius: 2px;
+    margin: 12px auto 0 auto;
+}
+
+.secao-orcamento > p {
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #444444;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+}
+
+.secao-orcamento hr {
+    border: none;
+    height: 1px;
+    background-color: #cbd5e1;
+    margin: 35px 0 40px 0;
+}
+
+/* Card Principal do Formulário */
+.form-orcamento {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Agrupamentos do Formulário (Fieldsets) */
+.form-grupo {
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px 30px;
+    margin-bottom: 35px;
+    background-color: #f8fafc;
+}
+
+.form-grupo legend {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    padding: 0 12px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+/* Estrutura de Campos Individuais */
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo-form:last-child {
+    margin-bottom: 0;
+}
+
+.campo-form label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    margin-bottom: 8px;
+}
+
+/* Estilização de Entradas (Inputs, Select, Textarea) */
+.form-orcamento input[type="text"],
+.form-orcamento input[type="email"],
+.form-orcamento input[type="tel"],
+.form-orcamento input[type="number"],
+.form-orcamento select,
+.form-orcamento textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    color: #1e293b;
+    background-color: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    appearance: none; /* Padroniza o visual do select */
+}
+
+/* Adiciona seta personalizada no <select> */
+.form-orcamento select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%3003057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 18px;
+    padding-right: 40px;
+}
+
+/* ACESSIBILIDADE: Destaque de Foco Visível para Navegação via Teclado */
+.form-orcamento input:focus,
+.form-orcamento select:focus,
+.form-orcamento textarea:focus {
+    outline: none;
+    border-color: #0279da;
+    box-shadow: 0 0 0 4px rgba(2, 121, 218, 0.2);
+}
+
+.form-orcamento textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Placeholder discreto e legível */
+.form-orcamento ::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+/* Grid da Seção de Seleção de Produtos */
+.instrucao-selecao {
+    margin-bottom: 15px;
+    color: #475569;
+    font-weight: 500;
+}
+
+.form-grupo:has(.opcao-checkbox) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px 15px;
+}
+
+.form-grupo:has(.opcao-checkbox) legend,
+.form-grupo:has(.opcao-checkbox) .instrucao-selecao {
+    grid-column: 1 / -1;
+}
+
+/* Checkboxes Estilizadas e Touch-Friendly (Acessibilidade Mobile) */
+.opcao-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.opcao-checkbox:hover {
+    background-color: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+.opcao-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--cor-principal);
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.opcao-checkbox label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--cor-texto);
+    cursor: pointer;
+    margin: 0;
+    user-select: none;
+}
+
+/* Botão Enviar (Seguindo o padrão do .btn-orcamento) */
+.btn-enviar {
+    display: block;
+    width: 100%;
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border: none;
+    padding: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #001f3b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-enviar:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(2, 121, 218, 0.4);
+}
+
+.btn-enviar:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE MOBILE DA PÁGINA DE ORÇAMENTO (ATÉ 768PX)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .secao-orcamento h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-orcamento {
+        padding: 20px 15px;
+        border-radius: 8px;
+    }
+
+    .form-grupo {
+        padding: 20px 15px;
+        margin-bottom: 25px;
+    }
+
+    .form-grupo:has(.opcao-checkbox) {
+        grid-template-columns: 1fr; /* Lista os produtos em 1 coluna única no celular */
+    }
+
+    .opcao-checkbox {
+        padding: 12px 14px; /* Aumenta a área de toque no celular */
+    }
+
+    .btn-enviar {
+        padding: 14px;
+        font-size: 1.05rem;
+    }
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA PÁGINA DE APLICAÇÕES (VISUAL MODERNO E ACESSÍVEL)
+   ========================================================================== */
+
+/* Título e Cabeçalho da Seção */
+.secao-aplicacoes h1 {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    letter-spacing: -0.5px;
+    margin: 10px auto 20px auto;
+}
+
+.secao-aplicacoes h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #0279da;
+    border-radius: 2px;
+    margin: 12px auto 0 auto;
+}
+
+.secao-aplicacoes .descricao-secao {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #475569;
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+}
+
+/* Grid das Aplicações */
+.aplicacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* Card Individual de Setor */
+.aplicacao-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 35px 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aplicacao-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #cbd5e1;
+}
+
+/* Cabeçalho do Card (Com Ícone SVG Integrado) */
+.aplicacao-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+.aplicacao-icone {
+    width: 48px;
+    height: 48px;
+    background-color: #e0f2fe;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0279da;
+    flex-shrink: 0;
+}
+
+.aplicacao-icone svg {
+    width: 26px;
+    height: 26px;
+}
+
+.aplicacao-card h2 {
+    font-size: 1.4rem;
+    color: var(--cor-principal);
+    font-weight: 700;
+    margin: 0;
+}
+
+.aplicacao-card > p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Lista de Produtos / Insumos */
+.lista-aplicacoes {
+    list-style: none;
+    padding: 0;
+    margin: auto 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lista-aplicacoes li {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: #1e293b;
+    padding-left: 28px;
+    position: relative;
+    line-height: 1.4;
+}
+
+/* Ícone de Check Azul Personalizado para a Lista */
+.lista-aplicacoes li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    background-color: #0279da;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+/* Chamada para Ação no Final da Página */
+.aplicacao-cta {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 35px 25px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.aplicacao-cta h3 {
+    font-size: 1.3rem;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+}
+
+.aplicacao-cta p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .secao-aplicacoes h1 {
+        font-size: 1.8rem;
+    }
+
+    .aplicacoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aplicacao-card {
+        padding: 25px 20px;
+    }
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA PÁGINA DE TIPOS DE PLÁSTICO
+   ========================================================================== */
+
+/* Título e Cabeçalho */
+.main-container .page-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    letter-spacing: -0.5px;
+    margin: 10px auto 20px auto;
+}
+
+.main-container .page-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #0279da;
+    border-radius: 2px;
+    margin: 12px auto 0 auto;
+}
+
+.main-container .page-description {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #475569;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+/* Grid de Plásticos (3 colunas no desktop) */
+.plastics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+/* Card Individual de Cada Polímero */
+.plastic-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plastic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-color: #cbd5e1;
+}
+
+/* Cabeçalho do Card (Nome + Ícone Símbolo SVG) */
+.plastic-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 15px;
+}
+
+.plastic-card .card-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    margin: 0;
+}
+
+.plastic-card .symbol-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.plastic-card .card-subtitle {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.plastic-card .card-text {
+    font-size: 0.95ln;
+    color: #475569;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Títulos de Listas nos Cards */
+.card-list-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Listas de Usos Recomendados */
+.card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-list li {
+    font-size: 0.9rem;
+    color: #334155;
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.4;
+}
+
+.card-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 3px;
+    width: 14px;
+    height: 14px;
+    background-color: #0279da;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+/* ==========================================================================
+   SEÇÃO DE PLÁSTICO RECUPERADO (SUSTENTABILIDADE)
+   ========================================================================== */
+.recycled-section {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-left: 6px solid #16a34a; /* Verde sustentabilidade institucional */
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 50px;
+}
+
+.recycled-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 15px;
+}
+
+.recycled-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    margin: 0;
+}
+
+.badge-sustainability {
+    background-color: #dcfce7;
+    color: #166534;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.recycled-text {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Alerta de Normas / ANVISA */
+.alert-box {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-left: 4px solid #dc2626;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.alert-text {
+    font-size: 0.95rem;
+    color: #991b1b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Ajustes de Responsividade Mobile */
+@media (max-width: 768px) {
+    .main-container .page-title {
+        font-size: 1.8rem;
+    }
+
+    .plastics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plastic-card {
+        padding: 20px;
+    }
+
+    .recycled-section {
+        padding: 25px 20px;
+    }
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA PÁGINA DE QUALIDADE (MODERNA E TÉCNICA)
+   ========================================================================== */
+
+/* Estilização Geral das Seções da Página de Qualidade */
+.secao-qualidade {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* Títulos Principais e Secundários da Página */
+.secao-qualidade .cabecalho-secao h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.secao-qualidade .cabecalho-secao h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #0279da;
+    border-radius: 2px;
+    margin: 12px 0 0 0; /* Alinhado à esquerda para manter sobriedade corporativa */
+}
+
+.secao-qualidade h2,
+#consideracoes-tecnicas h2,
+#consideracoes-projeto h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+/* Textos e Parágrafos */
+.conteudo-qualidade p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+/* Lista de Política de Qualidade */
+.lista-qualidade {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 15px;
+}
+
+.lista-qualidade li {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1e293b;
+    position: relative;
+    padding-left: 45px;
+}
+
+.lista-qualidade li::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    width: 18px;
+    height: 18px;
+    background-color: #16a34a; /* Verde sucesso institucional */
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+/* Banner / Gif de Selos e ISO centralizado com destaque */
+.banner-qualidade {
+    text-align: center;
+    background-color: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.banner-qualidade .img-banner {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 6px;
+}
+
+.assinatura-direcao {
+    font-style: italic;
+    color: #64748b;
+    font-size: 1rem;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* Listas de Considerações Técnicas e de Projeto */
+.lista-consideracoes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista-consideracoes li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #334155;
+    background-color: #f8fafc;
+    border-left: 4px solid var(--cor-principal);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    transition: background-color 0.2s ease;
+}
+
+.lista-consideracoes li:hover {
+    background-color: #f1f5f9;
+}
+
+/* Seção de Contato / Destaque Técnico Final */
+.secao-destaque-tecnico {
+    background: linear-gradient(135deg, var(--cor-principal) 0%, #0056b3 100%);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 48, 87, 0.15);
+    margin-top: 40px;
+}
+
+.secao-destaque-tecnico h2 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin: 0;
+    border: none;
+    padding: 0;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .secao-qualidade {
+        padding: 20px;
+    }
+
+    .secao-qualidade .cabecalho-secao h1 {
+        font-size: 1.7rem;
+    }
+
+    .lista-qualidade {
+        grid-template-columns: 1fr;
+    }
+
+    .secao-destaque-tecnico {
+        padding: 25px 20px;
+    }
+    
+    .secao-destaque-tecnico h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA PÁGINA DE TRABALHE CONOSCO E PARCERIAS
+   ========================================================================== */
+
+/* Estilização do Cabeçalho da Página */
+.main-container .section-content h1.page-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    letter-spacing: -0.5px;
+    margin: 10px auto 20px auto;
+}
+
+.main-container .section-content h1.page-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #0279da;
+    border-radius: 2px;
+    margin: 12px auto 0 auto;
+}
+
+.main-container .section-content .page-description {
+    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #475569;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+/* Card Principal do Formulário */
+.form-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    max-width: 850px;
+    margin: 0 auto 50px auto;
+}
+
+/* Estrutura de Linhas (Duas Colunas no Desktop) */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Grupo de Campos */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+/* Rótulos dos Campos */
+.form-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    margin-bottom: 8px;
+}
+
+.form-note {
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: #64748b;
+}
+
+/* Controles (Inputs, Selects e Textarea) */
+.form-control,
+.form-select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    color: #1e293b;
+    background-color: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    appearance: none;
+}
+
+/* Seta personalizada para o select */
+.form-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23003057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 18px;
+    padding-right: 40px;
+}
+
+/* Campo de Arquivo (Upload de Currículo) estilizado */
+.form-control-file {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #475569;
+    background-color: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-control-file:hover {
+    background-color: #f1f5f9;
+    border-color: var(--cor-principal);
+}
+
+/* Foco Visível para Acessibilidade (Teclado Tab) */
+.form-control:focus,
+.form-select:focus,
+.form-control-file:focus,
+.form-card textarea:focus {
+    outline: none;
+    border-color: #0279da;
+    box-shadow: 0 0 0 4px rgba(2, 121, 218, 0.2);
+}
+
+.form-card textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Placeholders claros */
+.form-card ::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+/* Ações / Botão de Envio */
+.form-actions {
+    margin-top: 30px;
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-submit:hover {
+    background-color: #001f3b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE MOBILE (ATÉ 768PX)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .main-container .section-content h1.page-title {
+        font-size: 1.8rem;
+    }
+
+    .form-card {
+        padding: 25px 20px;
+        border-radius: 8px;
+    }
+
+    /* Transforma o grid de duas colunas em uma única coluna no celular */
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA PÁGINA DE CONTATO (LAYOUT DE DUAS COLUNAS + MAPA MOLDADO)
+   ========================================================================== */
+
+/* Cabeçalho da Página */
+.secao-contato #titulo-contato {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    letter-spacing: -0.5px;
+    margin: 10px auto 15px auto;
+}
+
+.secao-contato #titulo-contato::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #0279da;
+    border-radius: 2px;
+    margin: 12px auto 0 auto;
+}
+
+.secao-contato .subtitulo-empresa {
+    text-align: center;
+    font-size: 1.05rem;
+    color: #475569;
+    font-weight: 600;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    border: none;
+    padding: 0;
+}
+
+/* Grid Principal: 2 Colunas Lado a Lado no Desktop */
+.grid-contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.coluna-esquerda,
+.coluna-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Estilo Base Unificado dos Cards */
+.card-horarios,
+.card-endereco,
+.secao-formulario {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Títulos dos Cards */
+.card-horarios h2,
+.card-endereco h2,
+.secao-formulario h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+/* 1. Card de Horários de Atendimento */
+.item-horario {
+    margin-bottom: 15px;
+}
+
+.item-horario:last-child {
+    margin-bottom: 0;
+}
+
+.item-horario h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.item-horario p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* 2. Card de Endereço e Telefones */
+.card-endereco {
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.texto-endereco {
+    font-size: 0.95rem;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+.contatos-diretos p {
+    font-size: 0.95rem;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.contatos-diretos p:last-child {
+    margin-bottom: 0;
+}
+
+.contatos-diretos strong {
+    color: var(--cor-principal);
+}
+
+.contatos-diretos a {
+    color: #0279da;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.contatos-diretos a:hover {
+    color: #003057;
+}
+
+/* 3. Formulário de Contato Fale Conosco */
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-contato > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contato label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    margin-bottom: 8px;
+}
+
+.form-contato input[type="text"],
+.form-contato input[type="email"],
+.form-contato input[type="tel"],
+.form-contato select,
+.form-contato textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    color: #1e293b;
+    background-color: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    appearance: none;
+}
+
+.form-contato select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23003057' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 18px;
+    padding-right: 40px;
+}
+
+.form-contato input:focus,
+.form-contato select:focus,
+.form-contato textarea:focus {
+    outline: none;
+    border-color: #0279da;
+    box-shadow: 0 0 0 4px rgba(2, 121, 218, 0.2);
+}
+
+.form-contato textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-contato button[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: var(--cor-principal);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-contato button[type="submit"]:hover {
+    background-color: #001f3b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 4. Bloco do Google Maps com Moldura Estilizada */
+.mapa-container {
+    background-color: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    padding: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    height: 100%;
+    min-height: 400px;
+    display: flex;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mapa-container:hover {
+    border-color: #0279da;
+    box-shadow: 0 6px 20px rgba(2, 121, 218, 0.15);
+}
+
+.mapa-container iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none;
+    border-radius: 6px;
+    min-height: 390px;
+    flex-grow: 1;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE MOBILE (ATÉ 992PX)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .grid-contato {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card-horarios,
+    .card-endereco,
+    .secao-formulario {
+        padding: 25px 20px;
+    }
+
+    .mapa-container {
+        min-height: 320px;
+    }
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA PÁGINA EMPRESA (INSTITUCIONAL MODERNO)
+   ========================================================================== */
+
+.conteudo-empresa {
+    max-width: 900px !important; /* Mantém a leitura focada e agradável, sem esticar demais */
+}
+
+.empresa-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 10px 0 50px 0;
+}
+
+/* Card Institucional Base */
+.card-empresa {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* Títulos Principais */
+.card-empresa h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.card-empresa h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #0279da;
+    border-radius: 2px;
+    margin: 12px 0 0 0;
+}
+
+.card-empresa h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cor-principal);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f1f5f9;
+}
+
+/* Blocos de Texto Institucional */
+.empresa-texto p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.empresa-texto p:last-child {
+    margin-bottom: 0;
+}
+
+/* Parágrafo de Introdução em Destaque */
+.destaque-introducao {
+    font-size: 1.15rem;
+    color: #1e293b;
+    font-weight: 500;
+    border-left: 4px solid #0279da;
+    padding-left: 18px;
+    margin-bottom: 25px !important;
+}
+
+/* Grid de Capacidades de Litragem */
+.capacidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.capacidade-item {
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--cor-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.capacidade-item:hover {
+    background-color: #e0f2fe;
+    transform: translateY(-2px);
+    border-color: #0279da;
+}
+
+.capacidade-item small {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .card-empresa {
+        padding: 25px 20px;
+    }
+
+    .card-empresa h1 {
+        font-size: 1.7rem;
+    }
+
+    .capacidades-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
