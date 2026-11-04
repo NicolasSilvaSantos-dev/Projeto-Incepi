@@ -149,7 +149,7 @@ function injetarBotaoWhatsApp() {
         </svg>
     `;
 
-    whatsappBtn.addEventListener("click", () => {
+    whatsappBtn.addEventListener("mouseenter", () => {
         somWhatsApp.currentTime = 0; // Reinicia o som caso seja clicado novamente
         somWhatsApp.play().catch((erro) => {
             console.warn("Não foi possível reproduzir o áudio:", erro);
