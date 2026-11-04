@@ -39,6 +39,8 @@ Dia 23/10/26 - Hoje fizemos o teste de várias cores, nossa cor principal mudou 
 
 **Componentes**: Dia 16/10/26 - Hoje adicionamos o menu hambúrguer e melhoramos a responsividade do site. 
 Dia 30/10/2026 - Melhoramos as imagens dos produtos, pois estavam desatualizadas.  - Alteramos a imagem do ícone do site, pois estava em formato errado.  - A imagem da home virou um background desfocado com uma breve descrição, foi adicionados botões destacados, uma faixa de informações sobre a empresa e uma parte que exibe quantos anos a empresa tem atrelado a um script que faz o calcúlo automático da idade, foi colocado 2 blocos novos de conteudo extra levando para outras paginas, correções de responsividade mobile e visuais.  - A pagina de produtos foi melhorada para organizar melhor os produtos e no css foi adicionado uma estilização de flex box para cada produto criando caixas contendo nome imagem e que são responsivas para o mobile se reorganizando corretamente, cada caixa tem botões que modificam de cor quando passa o mouse e um efeito de saltar para dar destaque ao produto, titulo da pagina foi centralizado e adicionado um mini traço azul para dar um efeito agradavel.
+Dia 02/11/2026 - O visual das ultimas páginas foi criado, formulários e blocos de textos organizados para melhor leitura e uso, tudo adaptado para o uso via teclado e mobile, tambem foi adicionado um botão flutuante de whatsapp no css do header e no js, ainda não foi configurado o numero do whatsapp mas a mensagem ja esta pronta.
+Dia 04/11/2026 - Adicionamos um áudio ao clicar no botão do WhatsApp.
 
 **Elementos de páginas**:  
 Fizemos uma pesquisa em alguns sites e escolhemos certos elementos que seriam interesantes estarem no nosso site:
@@ -51,7 +53,11 @@ A conclusão deste projeto representa muito mais do que a entrega de um novo sit
 
 Como colaborador da Incepi, desenvolver este portal teve um significado especial. Foi uma experiência técnica extremamente divertida e enriquecedora. Superar os desafios ao longo da criação, especialmente na estruturação da página de produtos e na integração de áudios e vídeos, nos trouxe grandes aprendizados e a certeza estarmos entregando o nosso melhor.
 
-Gostaria de deixar um agradecimento especial ao Sr. Claudio, um dos proprietários da empresa. Quando surgiu a oportunidade de criar um site, busquei o setor administrativo e ele não apenas autorizou o projeto imediatamente, mas também acreditou na ideia.  
+Gostaria de deixar um agradecimento especial ao Sr. Claudio, um dos proprietários da empresa. Quando surgiu a oportunidade de criar um site, busquei o setor administrativo e ele não apenas autorizou o projeto imediatamente, mas também acreditou na ideia.
+
+## Validação W3C
+
+!(w3c validação/aplicacao html w3c.png)
 
 ## Site no (GitHub Pages)
   
