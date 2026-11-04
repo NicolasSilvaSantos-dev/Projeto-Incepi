@@ -57,7 +57,8 @@ Gostaria de deixar um agradecimento especial ao Sr. Claudio, um dos proprietári
 
 ## Validação W3C
 
-![](w3c validação/aplicacao html w3c.png)
+<img src="w3c validação/aplicacao html w3c.png" width = "100">
+
 
 ## Site no (GitHub Pages)
   
