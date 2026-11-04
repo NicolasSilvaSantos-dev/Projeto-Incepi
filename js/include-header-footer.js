@@ -130,7 +130,7 @@ function injetarBotaoWhatsApp() {
     // Mensagem padrão codificada para URL
     const mensagemPadrao = encodeURIComponent("Olá! Vim através do site da Incepi do Brasil e gostaria de mais informações.");
 
-    const somWhatsApp = new Audio("../assets/audio/ding_whats.mp3");
+    const somWhatsApp = new Audio("assets/audio/ding_whats.mp3");
     somWhatsApp.preload = "auto";
     somWhatsApp.volume = 0.2;
     
@@ -149,7 +149,7 @@ function injetarBotaoWhatsApp() {
         </svg>
     `;
 
-    whatsappBtn.addEventListener("mouseenter", () => {
+    whatsappBtn.addEventListener("click", () => {
         somWhatsApp.currentTime = 0; // Reinicia o som caso seja clicado novamente
         somWhatsApp.play().catch((erro) => {
             console.warn("Não foi possível reproduzir o áudio:", erro);
