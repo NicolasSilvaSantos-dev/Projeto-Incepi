@@ -130,7 +130,7 @@ function injetarBotaoWhatsApp() {
     // Mensagem padrão codificada para URL
     const mensagemPadrao = encodeURIComponent("Olá! Vim através do site da Incepi do Brasil e gostaria de mais informações.");
 
-    const somWhatsApp = new Audio("ding_whats.mp3");
+    const somWhatsApp = new Audio("../../assets/audio/ding_whats.mp3");
     somWhatsApp.preload = "auto";
     
     // Cria o elemento do botão flutuante
