@@ -2449,3 +2449,40 @@ body {
     margin-bottom: 12px;
     margin-top: 25px;
 }
+
+/* Layout de duas colunas para a seção da empresa */
+.empresa-grid-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.empresa-grid-layout .empresa-texto {
+    flex: 1; /* Ocupa o espaço proporcional à esquerda */
+}
+
+.empresa-imagem-lateral {
+    flex: 0 0 380px; /* Largura fixa controlada para a imagem vertical */
+    max-width: 100%;
+}
+
+.empresa-imagem-lateral img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsividade: em telas menores (tablets e celulares), empilha a imagem abaixo do texto */
+@media (max-width: 900px) {
+    .empresa-grid-layout {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .empresa-imagem-lateral {
+        width: 100%;
+    }
+}
