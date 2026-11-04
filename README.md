@@ -58,6 +58,11 @@ Gostaria de deixar um agradecimento especial ao Sr. Claudio, um dos proprietári
 ## Validação W3C
 
 <img src="w3c validação/aplicacao html w3c.png" width = "250">  <img src="w3c validação/contato html w3c.png" width = "250">  <img src="w3c validação/empresa html w3c.png" width = "250">
+<img src = "w3c validação/header-footer css w3c.png" width = "250"> <img src = "w3c validação/index html w3c.png" width = "250"> <img src = "w3c validação/orcamento html w3c.png" width = "250">
+<img src = "w3c validação/produtos html w3c.png" width = "250"> <img src = "w3c validação/qualidade html w3c.png" width = "250"> <img src = "w3c validação/styles css w3c.png" width = "250">
+<img src = "w3c validação/tipo-de-plastico html w3c.png" width = "250"> <img src = "w3c validação/todos os produtos individuais  html w3c.png" width = "250"> <img src = "w3c validação/trabalhe-consco html w3c.png" width = "250">
+
+
 
 
 ## Site no (GitHub Pages)
