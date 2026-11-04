@@ -47,13 +47,17 @@ Fizemos uma pesquisa em alguns sites e escolhemos certos elementos que seriam in
 - Faixa de conquista do site VidaPlast
 - Lupa de imagem do site Praxis Embalagens
 
+## Uso de IA 
+
+Usamos o Gemini para melhorar imagens, verificar e consertar erros no HTML e no CSS e a auxiliar nas construção das páginas. 
+
 ## Conclusão
 
 A conclusão deste projeto representa muito mais do que a entrega de um novo site; é a modernização da vitrine digital da Incepi do Brasil. O objetivo central é alinhar a plataforma online com a excelência técnica e a vanguarda do parque fabril que a empresa mantém desde 1989. Agora, o portal transmite a mesma segurança, qualidade e confiança que os clientes já conhecem em nossas embalagens de alta performance.
 
-Como colaborador da Incepi, desenvolver este portal teve um significado especial. Foi uma experiência técnica extremamente divertida e enriquecedora. Superar os desafios ao longo da criação, especialmente na estruturação da página de produtos e na integração de áudios e vídeos, nos trouxe grandes aprendizados e a certeza estarmos entregando o nosso melhor.
+Como colaborador da Incepi, desenvolver este portal teve um significado especial. Foi uma experiência técnica extremamente divertida e enriquecedora. Superar os desafios ao longo da criação, especialmente na estruturação da página de produtos e na integração de áudios e vídeos, nos trouxe grandes aprendizados e a certeza estarmos entregando o nosso melhor. Aprendemos a cada etapa do projeto desde HTML, CSS E JavaScript.
 
-Gostaria de deixar um agradecimento especial ao Sr. Claudio, um dos proprietários da empresa. Quando surgiu a oportunidade de criar um site, busquei o setor administrativo e ele não apenas autorizou o projeto imediatamente, mas também acreditou na ideia.
+Gostariamos de deixar um agradecimento especial ao Sr. Claudio, um dos proprietários da empresa. Quando surgiu a oportunidade de criar um site, busquei o setor administrativo e ele não apenas autorizou o projeto imediatamente, mas também acreditou na ideia.
 
 ## Validação W3C
 
